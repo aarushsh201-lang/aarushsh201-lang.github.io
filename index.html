@@ -1,53 +1,895 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090d18">
-<meta name="description" content="Aarush Sharma — Class 11 PCM student exploring computer science, AI, problem-solving and learning by building.">
-<meta property="og:title" content="Aarush Sharma | Learning by Building">
-<meta property="og:description" content="Student portfolio — projects, achievements, STEM and basketball.">
-<meta property="og:type" content="website">
-<title>Aarush Sharma — Learning by Building</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#090d18" name="theme-color"/>
+<meta content="Aarush's personal portfolio: Class 11 PCM student exploring computer science, documenting a small Jarvis AI build, academic achievements, and basketball." name="description"/>
+<meta content="Aarush — Learning in Public" property="og:title"/>
+<meta content="A Class 11 student exploring computer science, documenting small builds, and learning through academics and basketball." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23090d18'/%3E%3Cpath d='M13 48 28 13h8l15 35h-9l-3-8H25l-3 8z' fill='%23d8ff7f'/%3E%3Cpath d='M28 32h9' stroke='%23090d18' stroke-width='3'/%3E%3C/svg%3E" rel="icon"/>
+<title>Aarush — Student Portfolio | Learning in Public</title>
 <style>
-:root{color-scheme:dark;--bg:#090d18;--panel:#101729;--panel2:#141d32;--ink:#f3f5ff;--muted:#aab3c9;--line:#27314b;--lime:#d8ff7f;--purple:#a99cff;--cyan:#7be6df;--orange:#ff9f70;--max:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 82% 3%,#1c2543 0,transparent 35%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:#090d18dd;backdrop-filter:blur(16px);border-bottom:1px solid #27314b99}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em}.mark{height:38px;width:38px;display:grid;place-items:center;border-radius:12px;background:var(--lime);color:#101522;font-size:20px;transform:rotate(-5deg)}.links{display:flex;align-items:center;gap:25px;color:var(--muted);font-size:14px}.links a:hover,.textlink:hover{color:var(--lime)}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:transform .2s,border-color .2s}.navcta:hover,.btn:hover{transform:translateY(-2px);border-color:var(--lime)}.btn.primary{background:var(--lime);color:#101522;border-color:var(--lime)}.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center;min-height:610px}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:var(--lime)}.dot{width:7px;height:7px;border-radius:100%;background:var(--lime);box-shadow:0 0 16px var(--lime)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(48px,7vw,83px);line-height:.99;letter-spacing:-.075em;margin:22px 0}.outline{color:transparent;-webkit-text-stroke:1.5px var(--purple)}.lead{max-width:560px;font-size:18px;line-height:1.8;color:var(--muted)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.micro{margin-top:25px;color:#7e8aa8;font-size:12px;letter-spacing:.04em}.visual{position:relative;min-height:420px;display:grid;place-items:center}.orb{width:min(350px,75vw);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 33% 25%,#d8ff7f 0,#a99cff 27%,#4d5ed1 48%,#151b30 72%);box-shadow:0 0 100px #8b7cff2b;animation:float 6s ease-in-out infinite}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #d8ff7f70;border-radius:50%;inset:-28px;transform:rotate(30deg) scaleY(.32)}.orb:after{inset:-56px;transform:rotate(-28deg) scaleY(.35);border-color:#a99cff70}.orbletter{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(150px,22vw,245px);font-weight:900;letter-spacing:-.13em;color:#101522;text-shadow:10px 12px 0 #fff2;transform:rotate(-8deg)}.floatcard{position:absolute;border:1px solid #ffffff20;background:#11182bdd;backdrop-filter:blur(12px);border-radius:15px;padding:13px 15px;box-shadow:0 18px 45px #0004}.floatcard strong{display:block;font-size:13px}.floatcard span{font-size:11px;color:var(--muted)}.fc1{top:34px;right:-2px}.fc2{left:-5px;bottom:45px}.fc3{right:0;bottom:0}.section{padding:82px 0;border-top:1px solid var(--line)}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:31px}.kicker{font-size:11px;color:var(--purple);font-weight:800;letter-spacing:.16em;text-transform:uppercase}.section h2{font-size:clamp(32px,4vw,51px);letter-spacing:-.06em;line-height:1.08;margin:10px 0}.sectionintro{max-width:470px;color:var(--muted);margin:0}.grid{display:grid;gap:16px}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:linear-gradient(145deg,#151e33,#0e1423);border:1px solid var(--line);padding:24px;border-radius:20px;min-width:0;transition:transform .22s,border-color .22s}.card:hover{transform:translateY(-4px);border-color:#7782a7}.cardnum{color:var(--lime);font-size:12px;font-weight:800;letter-spacing:.1em}.card h3{font-size:21px;letter-spacing:-.035em;margin:17px 0 8px}.card p{color:var(--muted);font-size:14px;margin-bottom:0}.tagrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tag{font-size:11px;color:#d4dbef;border:1px solid #35405a;border-radius:999px;padding:5px 9px}.feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.featureintro{background:linear-gradient(145deg,#222d48,#111729);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:310px}.featureintro .big{font-size:74px;line-height:1;font-weight:900;letter-spacing:-.1em;color:var(--lime)}.featureintro h3{font-size:27px;letter-spacing:-.04em;margin:20px 0 8px}.featureintro p{color:var(--muted);font-size:14px}.featuredetails{display:grid;gap:12px}.detail{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px}.detailtop{display:flex;justify-content:space-between;gap:16px;align-items:center}.detail h3{margin:0;font-size:15px}.detail small{color:var(--lime);font-size:11px;font-weight:800}.detail p{margin:8px 0 0;color:var(--muted);font-size:13px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{cursor:pointer;padding:8px 12px;border-radius:9px;border:1px solid var(--line);color:var(--muted);background:transparent;font-size:12px}.tab[aria-selected=true]{background:var(--lime);border-color:var(--lime);color:#101522;font-weight:800}.hidden{display:none!important}.results{grid-template-columns:repeat(4,minmax(0,1fr))}.result{border:1px solid var(--line);border-radius:18px;padding:20px;background:#101729}.result .label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}.result .value{font-size:33px;letter-spacing:-.06em;font-weight:850;margin:10px 0 4px}.result .sub{font-size:12px;color:var(--muted)}.result.highlight{background:var(--lime);color:#101522;border-color:var(--lime)}.result.highlight .label,.result.highlight .sub{color:#344121}.result.highlight .value{font-size:38px}.timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.mile{padding:23px;border-left:2px solid var(--purple);background:linear-gradient(90deg,#a99cff12,transparent);border-radius:0 15px 15px 0}.mile .num{font-size:11px;color:var(--purple);font-weight:800;letter-spacing:.12em}.mile h3{margin:12px 0 6px;font-size:18px}.mile p{margin:0;color:var(--muted);font-size:13px}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.abouttext{font-size:17px;line-height:1.9;color:var(--muted)}.principles{display:grid;gap:10px}.principle{padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:var(--panel);display:flex;gap:12px;align-items:center}.principle b{font-size:13px}.principle span{font-size:12px;color:var(--muted);display:block}.check{color:var(--lime);font-size:17px}.contactbox{border:1px solid #4a496f;border-radius:24px;padding:clamp(25px,5vw,54px);background:radial-gradient(ellipse at 90% 10%,#a99cff22,transparent 35%),linear-gradient(140deg,#141d32,#0d1321);display:flex;justify-content:space-between;align-items:center;gap:30px}.contactbox h2{font-size:clamp(32px,4.5vw,55px);letter-spacing:-.065em;margin:10px 0}.contactbox p{max-width:520px;color:var(--muted);margin-bottom:0}.foot{padding:25px 0 40px;color:#7985a1;font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.textlink{color:var(--lime);text-decoration:underline;text-underline-offset:4px}#topbtn{position:fixed;bottom:20px;right:20px;z-index:10;border:1px solid var(--line);background:#141d32;color:var(--ink);border-radius:12px;padding:11px 14px;cursor:pointer;display:none}#topbtn.show{display:block}.menuButton{display:none;background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:8px 11px}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(2deg)}}@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:65px;gap:15px}.visual{min-height:350px}.three{grid-template-columns:repeat(2,minmax(0,1fr))}.results{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.sectionhead{align-items:start;flex-direction:column}.contactbox{align-items:flex-start;flex-direction:column}}@media(max-width:600px){.wrap{width:calc(100% - 28px)}.nav{height:65px}.links{display:none;position:absolute;top:64px;left:0;right:0;padding:17px 22px 22px;background:#090d18f7;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:14px}.links.open{display:flex}.menuButton{display:block}.navcta{display:none}.hero{padding:55px 0 45px;min-height:0}h1{font-size:51px}.lead{font-size:16px}.visual{min-height:320px}.orb{width:245px}.orbletter{font-size:175px}.fc1{right:-4px;top:24px}.fc2{left:-3px;bottom:22px}.fc3{right:0;bottom:-4px}.section{padding:62px 0}.three{grid-template-columns:1fr}.aboutgrid{grid-template-columns:1fr}.result{padding:16px}.result .value{font-size:29px}.result.highlight .value{font-size:32px}.contactbox .actions{width:100%}.btn{flex:1}.foot{flex-direction:column}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-</style>
-</head>
+/* Embedded styles: standalone single-file edition */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#0b1020;--panel:#11182b;--panel2:#151e35;--text:#f3f6ff;--muted:#a0aac1;--faint:#67738e;--line:rgba(178,195,255,.15);--violet:#9b8cff;--blue:#76c7ff;--orange:#ffb17b;--mint:#8be1c2;--max:1160px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}.site-header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.18em}.brand-mark{width:29px;height:29px;display:grid;place-items:center;border:1px solid #7b80ed;border-radius:9px;color:#b9b1ff;letter-spacing:-.07em;font-size:14px}.brand-dot{color:var(--violet)}.nav-links{display:flex;align-items:center;gap:30px;color:var(--muted);font-size:12px;font-weight:600}.nav-links a{transition:color .2s}.nav-links a:hover{color:#fff}.nav-links .nav-cta{padding:10px 14px;border-radius:7px;border:1px solid var(--line);color:var(--text)}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:var(--text);border-radius:7px;padding:6px 10px;font-size:18px}.hero{min-height:660px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;column-gap:48px;position:relative;padding-top:70px;padding-bottom:88px}.hero:before{content:"";position:absolute;inset:0 -50vw;z-index:-1;opacity:.2;background-image:linear-gradient(rgba(155,140,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(155,140,255,.08) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(90deg,transparent,black 20%,black 75%,transparent)}.eyebrow,.project-type,.project-number,.milestone-category,.milestone-foot,.coming-label,.sport-kicker,.sports-small,.back-top,.hero-bottomline,.card-label,.core-kicker,.visual-caption,.project-footer,.now-tag{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.12em}.eyebrow{display:flex;align-items:center;gap:10px;color:#b5b0ff;margin:0 0 22px}.live-dot{width:7px;height:7px;border-radius:50%;background:#8be1c2;box-shadow:0 0 15px #8be1c2}.hero h1{font-size:clamp(42px,5.5vw,68px);line-height:1.09;letter-spacing:-.065em;margin:0;max-width:680px}.gradient-text{background:linear-gradient(100deg,#b0a2ff 5%,#76c7ff 56%,#8be1c2 100%);color:transparent;background-clip:text;-webkit-background-clip:text}.hero-intro{font-size:15px;line-height:1.9;max-width:570px;color:var(--muted);margin:25px 0 27px}.hero-actions,.contact-actions{display:flex;gap:12px;flex-wrap:wrap}.button{min-height:45px;display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:0 17px;border-radius:7px;font-size:12px;font-weight:800;transition:transform .2s,border-color .2s}.button:hover{transform:translateY(-2px)}.button-primary{color:#090d1a;background:linear-gradient(100deg,#b8adff,#84d8ef);box-shadow:0 7px 30px rgba(124,156,255,.12)}.button-secondary{border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--text)}.hero-note{display:flex;align-items:center;gap:12px;color:var(--faint);font-size:11px;margin-top:31px}.note-line{width:27px;height:1px;background:#7775ce}.hero-visual{height:430px;position:relative;display:grid;place-items:center}.orbit{position:absolute;border:1px solid rgba(160,170,255,.18);border-radius:50%;transform:rotate(-25deg)}.orbit-one{width:250px;height:350px}.orbit-two{width:350px;height:250px;transform:rotate(38deg)}.orbit-three{width:370px;height:370px;border-style:dashed;opacity:.65}.core-card{width:220px;height:220px;border:1px solid rgba(176,173,255,.36);border-radius:26px;background:linear-gradient(150deg,rgba(29,39,70,.95),rgba(14,20,39,.96));box-shadow:0 25px 90px rgba(57,62,142,.2),inset 0 1px rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2}.core-kicker{color:var(--mint);font-size:9px}.core-icon{font-family:"DM Mono",monospace;font-size:46px;line-height:1.35;letter-spacing:-.1em;color:#b5b0ff;text-shadow:0 0 35px rgba(155,140,255,.45)}.core-title{font-size:13px;font-weight:800}.core-subtitle{font-size:10px;color:var(--muted);margin-top:5px}.float-chip{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;background:#18213b;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.24);border-radius:9px;padding:9px 12px;font-size:11px;font-weight:700}.chip-icon{display:grid;place-items:center;width:23px;height:23px;border-radius:6px;background:rgba(155,140,255,.15);color:#b6aaff;font-family:"DM Mono",monospace}.chip-python{top:46px;left:10px}.chip-ai{right:6px;top:110px}.chip-sport{bottom:67px;left:13px}.visual-caption{position:absolute;bottom:20px;color:#606d89;font-size:9px}.hero-bottomline{position:absolute;bottom:27px;left:0;right:0;display:flex;justify-content:space-between;color:#596581;font-size:9px}.section{padding-top:105px;padding-bottom:105px}.section-tinted{background:linear-gradient(180deg,rgba(21,30,53,.7),rgba(17,24,43,.56));border-block:1px solid rgba(178,195,255,.06)}.section-heading{margin-bottom:43px}.section-heading h2,.now-card h2,.contact-inner h2{font-size:clamp(34px,4vw,47px);line-height:1.17;letter-spacing:-.055em;margin:0;font-weight:800}.muted-heading{color:#7f8ba7}.section-heading .eyebrow{margin-bottom:16px}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:75px}.about-copy p{color:var(--muted);font-size:13px;line-height:2;max-width:650px}.about-copy .large-copy{font-size:17px;line-height:1.9;color:#e3e8fa;margin-top:0}.principles-card{border:1px solid var(--line);border-radius:12px;padding:24px;background:rgba(255,255,255,.018)}.card-label{color:#7e89a8;font-size:9px;margin:0 0 22px}.principle{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line)}.principle-num{font:11px "DM Mono",monospace;color:#9d94ff;padding-top:2px}.principle strong,.now-item strong{display:block;font-size:12px}.principle small{display:block;font-size:11px;color:var(--muted);margin-top:5px}.heading-row{display:flex;justify-content:space-between;align-items:end;gap:40px}.heading-aside{max-width:355px;color:var(--muted);font-size:12px;line-height:1.9;margin:0 0 7px}.project-card{background:rgba(10,15,31,.7);border:1px solid rgba(155,140,255,.22);border-radius:14px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.12)}.project-topline,.project-footer{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;border-bottom:1px solid var(--line);color:#8c97b1}.project-number{color:#a7a0ff}.status{font:9px "DM Mono",monospace;letter-spacing:.08em;display:flex;align-items:center;gap:8px}.status span{height:6px;width:6px;border-radius:50%;background:#ffc078}.project-content{display:grid;grid-template-columns:1fr .85fr;gap:30px;align-items:center;padding:39px 34px}.project-type{color:#8d9abc;font-size:9px;margin:0 0 13px}.project-info h3,.coming-card h3,.milestone h3,.sports-card h3{font-size:26px;letter-spacing:-.04em;line-height:1.25;margin:0 0 14px}.project-info>p:not(.project-type):not(.honesty-note){font-size:12px;line-height:1.95;color:var(--muted);max-width:525px}.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}.tag-row span{font-size:9px;padding:6px 9px;border:1px solid var(--line);border-radius:5px;color:#c1c9dd;background:rgba(255,255,255,.025)}.honesty-note{font-size:10px;color:#9aa5be;line-height:1.7;border-left:2px solid #8c7ff4;padding-left:12px;margin:19px 0 0}.honesty-note span{color:#b3a8ff}.code-window{border:1px solid rgba(143,157,210,.22);border-radius:10px;background:#0b1121;overflow:hidden;font:10px/1.9 "DM Mono",monospace;box-shadow:0 16px 38px rgba(0,0,0,.24)}.window-bar{height:37px;display:flex;align-items:center;gap:5px;padding:0 12px;border-bottom:1px solid rgba(143,157,210,.15);position:relative}.window-bar>span{width:6px;height:6px;border-radius:50%;background:#52607a}.window-bar small{position:absolute;left:0;right:0;text-align:center;color:#697797;font-size:9px}.code-window pre{margin:0;padding:22px 19px;color:#d9e1f5;overflow-x:auto}.build-panel{padding:18px 18px 16px}.build-panel-label{margin:0 0 15px;color:#8794b2;font:9px "DM Mono",monospace;letter-spacing:.13em}.build-note-row{display:flex;gap:12px;padding:13px 0;border-top:1px solid rgba(143,157,210,.13)}.build-note-row>span{font:10px "DM Mono",monospace;color:#a9a0ff;padding-top:2px}.build-note-row strong{display:block;color:#e2e8fa;font:600 11px "Space Grotesk",system-ui,sans-serif}.build-note-row small{display:block;color:#929fba;font:10px/1.7 "Space Grotesk",system-ui,sans-serif;margin-top:3px}.build-panel-note{padding:10px 12px;margin:10px 0 0;border-left:2px solid #8b81f5;background:rgba(155,140,255,.055);font:10px/1.7 "Space Grotesk",system-ui,sans-serif;color:#aab5cd}.code-purple{color:#c8a5ff}.code-blue{color:#82cbff}.code-yellow{color:#ffe19b}.code-green{color:#a7e6bd}.code-comment{color:#74839f}.terminal-line{font-size:9px;display:flex;align-items:center;gap:7px;padding:10px 14px;border-top:1px solid rgba(143,157,210,.12);color:#8290ac}.terminal-line strong{color:#8be1c2;font-weight:500}.terminal-dot{height:5px;width:5px;border-radius:50%;background:#8be1c2}.cursor{color:#a6a1ff;animation:blink 1.1s steps(2,start) infinite}@keyframes blink{to{visibility:hidden}}.project-footer{border-top:1px solid var(--line);border-bottom:0;padding:14px 22px;font-size:9px}.coming-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:16px}.coming-card{border:1px solid var(--line);border-radius:11px;padding:25px;background:rgba(255,255,255,.02)}.coming-card-outline{background:transparent;border-style:dashed}.coming-symbol{font-size:26px;color:#aca2ff;margin-bottom:18px}.coming-card h3{font-size:19px;margin-bottom:10px}.coming-card p:not(.project-type){font-size:11px;line-height:1.9;color:var(--muted);min-height:63px}.coming-label{display:block;color:#6f7d9d;font-size:8px;margin-top:22px}.milestone-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.milestone{padding:25px;border:1px solid var(--line);border-radius:11px;background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.008));min-height:260px;display:flex;flex-direction:column;align-items:flex-start}.milestone-icon{min-width:36px;width:auto;height:36px;padding:0 9px;display:grid;place-items:center;border-radius:9px;background:rgba(155,140,255,.12);border:1px solid rgba(155,140,255,.18);color:#b4aaff;font:10px "DM Mono",monospace;margin-bottom:22px}.milestone-sport .milestone-icon{background:rgba(255,177,123,.1);border-color:rgba(255,177,123,.2);color:#ffcca8}.milestone-category{font-size:8px;color:#8c95b4;margin:0 0 12px}.milestone h3{font-size:17px}.milestone>p:not(.milestone-category){font-size:11px;line-height:1.85;color:var(--muted);margin:0 0 25px}.milestone-foot{font-size:8px;color:#818baa;margin-top:auto}.footnote{font-size:10px;color:#75819f;margin-top:18px}.beyond-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;align-items:center}.sports-card{padding:31px;border:1px solid rgba(255,177,123,.2);border-radius:13px;background:radial-gradient(circle at 100% 0%,rgba(255,177,123,.08),transparent 42%),#101729}.sports-head{display:flex;align-items:center;gap:12px;margin-bottom:24px}.basketball-mark{display:grid;place-items:center;width:37px;height:37px;border-radius:10px;background:rgba(255,177,123,.1);color:var(--orange);font-size:26px}.sport-kicker{color:#c39e85;font-size:8px}.sports-card h3{font-size:27px}.sports-card>p{font-size:12px;line-height:1.9;color:var(--muted)}.sports-highlight{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}.sports-highlight>div{padding:15px;border:1px solid rgba(255,177,123,.16);border-radius:7px;background:rgba(255,255,255,.018)}.sports-highlight strong{display:block;font-size:12px;color:#ffcca8}.sports-highlight span{display:block;font-size:9px;color:#929cb2;margin-top:5px}.sports-small{font-size:8px!important;color:#77819a!important;margin-top:20px}
+.beyond-cards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.beyond-card{min-width:0;height:100%;padding:25px;display:flex;flex-direction:column}
+.beyond-card h3{font-size:23px}
+.beyond-card>p{font-size:11px;line-height:1.85}
+.beyond-card .sports-highlight{grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.beyond-card .sports-highlight>div{padding:12px}
+.beyond-card .sports-highlight strong{font-size:11px}
+.beyond-card .sports-highlight span{font-size:8px;line-height:1.55}
+.beyond-card-speaking{border-color:rgba(118,199,255,.22);background:radial-gradient(circle at 100% 0%,rgba(118,199,255,.09),transparent 45%),#101729}
+.beyond-card-speaking .basketball-mark{background:rgba(118,199,255,.1);color:var(--blue);border:1px solid rgba(118,199,255,.15);font-size:20px}
+.beyond-card-speaking .sport-kicker{color:#95c9e7}
+.beyond-card-beehes{border-color:rgba(155,140,255,.24);background:radial-gradient(circle at 100% 0%,rgba(155,140,255,.1),transparent 45%),#101729}
+.beyond-card-beehes .basketball-mark{background:rgba(155,140,255,.12);color:var(--violet);border:1px solid rgba(155,140,255,.18);font-size:12px;font-weight:800}
+.beyond-card-beehes .sport-kicker{color:#b2a8ef}
+.beyond-points{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.beyond-points span{font-size:9px;line-height:1.4;padding:7px 8px;border:1px solid rgba(118,199,255,.18);border-radius:6px;background:rgba(255,255,255,.02);color:#c7d8e8}
+.beyond-card .sports-small{margin-top:auto;padding-top:14px}
+.now-card{border:1px solid var(--line);background:linear-gradient(140deg,rgba(155,140,255,.06),rgba(118,199,255,.025));border-radius:14px;padding:42px;display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.now-card h2{font-size:35px}.now-list{display:flex;flex-direction:column}.now-item{display:grid;grid-template-columns:8px 1fr auto;align-items:start;gap:13px;padding:16px 0;border-bottom:1px solid var(--line)}.now-item:first-child{padding-top:0}.now-item:last-child{border-bottom:0;padding-bottom:0}.now-dot{height:7px;width:7px;border-radius:50%;margin-top:6px}.dot-violet{background:#aa9dff}.dot-blue{background:#76c7ff}.dot-orange{background:#ffb17b}.now-item p{color:var(--muted);font-size:10px;line-height:1.7;margin:5px 0 0}.now-tag{color:#7e89a9;font-size:8px;white-space:nowrap}.contact-section{padding:100px 0;background:radial-gradient(ellipse at 50% 0%,rgba(105,104,207,.16),transparent 60%),#080c18;border-top:1px solid var(--line);text-align:center}.contact-inner>.eyebrow{justify-content:center}.contact-inner h2{font-size:clamp(38px,5vw,56px)}.contact-inner>p:not(.eyebrow):not(.contact-edit-note){font-size:12px;color:var(--muted);margin:20px auto 25px;max-width:470px}.contact-actions{justify-content:center}.contact-edit-note{color:#687592;font-size:9px;margin-top:23px}.contact-edit-note code{font-family:"DM Mono",monospace;color:#9eabca}.site-footer{border-top:1px solid var(--line);background:#080c18}.footer-inner{min-height:77px;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-inner>span{font-size:10px;color:#6d7893}.footer-brand{font-size:10px}.back-top{color:#858ead;font-size:8px}.skip-link{position:absolute;left:-9999px;top:10px;background:#fff;color:#000;padding:8px;z-index:100}.skip-link:focus{left:10px}
+@media(max-width:900px){.milestone-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr .8fr;gap:20px;min-height:590px}.hero-visual{transform:scale(.82);margin-inline:-30px}.about-grid{gap:35px}.project-content{grid-template-columns:1fr;gap:20px}.code-window{max-width:600px}.beyond-grid{gap:30px}.beyond-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.beyond-card:first-child{grid-row:span 2}.now-card{gap:25px;padding:30px}.milestone{padding:20px}}
+@media(max-width:680px){.wrap{width:min(var(--max),calc(100% - 32px))}.nav{height:65px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 20px 22px;background:#10172a;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}.nav-links.open{display:flex}.nav-links .nav-cta{text-align:center}.hero{grid-template-columns:1fr;padding-top:62px;padding-bottom:73px;min-height:auto}.hero h1{font-size:clamp(42px,12vw,60px)}.hero-intro{font-size:13px}.hero-visual{height:350px;transform:scale(.84);margin:-5px -25px 0}.hero-bottomline{bottom:19px;font-size:7px}.section{padding-top:75px;padding-bottom:75px}.section-heading{margin-bottom:30px}.section-heading h2,.now-card h2{font-size:36px}.about-grid,.heading-row,.beyond-grid,.now-card{grid-template-columns:1fr;display:grid;gap:25px}.beyond-cards-grid{grid-template-columns:1fr}.beyond-card:first-child{grid-row:auto}.heading-row{align-items:start}.heading-aside{margin:0}.about-copy .large-copy{font-size:15px}.project-content{padding:25px 20px}.project-topline,.project-footer{padding:14px 15px}.project-footer{font-size:7px}.coming-grid,.milestone-grid{grid-template-columns:1fr}.milestone{min-height:auto}.milestone>p:not(.milestone-category){margin-bottom:20px}.coming-card p:not(.project-type){min-height:0}.sports-card{padding:24px}.now-card{padding:25px}.now-item{grid-template-columns:8px 1fr;gap:12px}.now-tag{grid-column:2}.contact-section{padding:75px 0}.contact-inner h2{font-size:42px}.footer-inner{padding:17px 0;flex-wrap:wrap}.footer-inner>span{order:3;width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* --- Motion and visual polish --- */
+:root{--pointer-x:50vw;--pointer-y:35vh;--scroll-progress:0}
+body{overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(500px circle at var(--pointer-x) var(--pointer-y),rgba(119,112,255,.075),transparent 65%);transition:background .15s}
+.scroll-progress{height:2px;position:fixed;z-index:100;top:0;left:0;right:0;background:transparent;pointer-events:none}.scroll-progress span{display:block;width:calc(var(--scroll-progress)*100%);height:100%;background:linear-gradient(90deg,var(--violet),var(--blue),var(--mint));box-shadow:0 0 12px rgba(118,199,255,.55)}
+.ambient-glow{position:fixed;width:380px;height:380px;border-radius:50%;pointer-events:none;z-index:-1;left:calc(var(--pointer-x) - 190px);top:calc(var(--pointer-y) - 190px);background:radial-gradient(circle,rgba(115,100,255,.045),transparent 68%);filter:blur(12px)}
+.hero-visual{isolation:isolate}.particle-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.85}.orbit,.core-card,.float-chip{will-change:transform}.orbit-one{animation:orbitDrift 13s ease-in-out infinite alternate}.orbit-two{animation:orbitDrift 17s ease-in-out infinite alternate-reverse}.orbit-three{animation:orbitSpin 60s linear infinite}.core-card{animation:coreFloat 6s ease-in-out infinite;backdrop-filter:blur(8px)}.core-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(185,173,255,.65),transparent 38%,rgba(118,199,255,.4));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}.float-chip{animation:chipFloat 5s ease-in-out infinite}.chip-ai{animation-delay:-1.7s}.chip-sport{animation-delay:-3.1s}.chip-python{animation-delay:-.8s}
+@keyframes orbitDrift{from{translate:-4px 2px;scale:.98}to{translate:7px -8px;scale:1.035}}@keyframes orbitSpin{to{rotate:360deg}}@keyframes coreFloat{0%,100%{translate:0 0;rotate:-1deg}50%{translate:0 -9px;rotate:1deg}}@keyframes chipFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+/* Elements gently appear as they enter the viewport. */
+.js-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.js-ready .reveal.is-visible{opacity:1;transform:translateY(0)}.js-ready .reveal[data-reveal="left"]{transform:translateX(-22px)}.js-ready .reveal[data-reveal="left"].is-visible{transform:translateX(0)}.js-ready .reveal[data-reveal="right"]{transform:translateX(22px)}.js-ready .reveal[data-reveal="right"].is-visible{transform:translateX(0)}
+.project-card,.coming-card,.milestone,.principles-card,.sports-card,.now-card{position:relative;isolation:isolate;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}.project-card::after,.coming-card::after,.milestone::after,.sports-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(380px circle at var(--card-x,50%) var(--card-y,0%),rgba(155,140,255,.12),transparent 62%);transition:opacity .3s;z-index:-1}.project-card:hover,.coming-card:hover,.milestone:hover,.principles-card:hover,.sports-card:hover{border-color:rgba(155,140,255,.42);box-shadow:0 22px 55px rgba(0,0,0,.2)}.project-card:hover::after,.coming-card:hover::after,.milestone:hover::after,.sports-card:hover::after{opacity:1}.milestone:hover,.coming-card:hover{transform:translateY(-5px)}.tag-row span{transition:color .2s,border-color .2s,background .2s}.tag-row span:hover{color:#fff;border-color:rgba(155,140,255,.55);background:rgba(155,140,255,.1)}
+.nav-links a{position:relative}.nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:linear-gradient(90deg,var(--violet),var(--blue));transition:right .25s}.nav-links a:not(.nav-cta):hover::after,.nav-links a.is-active::after{right:0}.button-primary{position:relative;overflow:hidden}.button-primary::after{content:"";position:absolute;inset:-80% -30%;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.38) 50%,transparent 65%);transform:translateX(-100%) rotate(8deg);transition:transform .7s}.button-primary:hover::after{transform:translateX(100%) rotate(8deg)}.button:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.hero-bottomline span:last-child{animation:hintPulse 2.4s ease-in-out infinite}@keyframes hintPulse{0%,100%{opacity:.5}50%{opacity:1}}
+@media(max-width:680px){.ambient-glow{display:none}.particle-canvas{opacity:.55}.hero-visual{overflow:visible}}
+@media(prefers-reduced-motion:reduce){.orbit,.core-card,.float-chip,.hero-bottomline span:last-child{animation:none!important}.js-ready .reveal,.js-ready .reveal.is-visible{opacity:1;transform:none;transition:none}.project-card,.coming-card,.milestone,.principles-card,.sports-card,.now-card{transition:none}}
+
+  
+
+
+/* Compact result tiles for the French Olympiad achievement. */
+.milestone-french{min-height:0}
+.milestone-french h3{margin-bottom:10px}
+.french-intro{font-size:10px!important;line-height:1.75!important;color:var(--muted)!important;margin:0 0 16px!important}
+.french-intro strong{color:#e8eaff;font-weight:700}
+.french-rank-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;width:100%;margin:0 0 18px}
+.french-rank-card{position:relative;min-width:0;padding:13px 11px 12px;border:1px solid rgba(155,140,255,.24);border-radius:9px;background:linear-gradient(145deg,rgba(155,140,255,.095),rgba(118,199,255,.035));display:flex;flex-direction:column;align-items:flex-start;overflow:hidden}
+.french-rank-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--violet),var(--blue));opacity:.85}
+.french-rank-ten{border-color:rgba(118,199,255,.24);background:linear-gradient(145deg,rgba(118,199,255,.09),rgba(139,225,194,.035))}
+.french-rank-ten::before{background:linear-gradient(180deg,var(--blue),var(--mint))}
+.french-class{font:8px "DM Mono",monospace;letter-spacing:.12em;color:#a9a2ff;margin-bottom:7px}
+.french-rank-ten .french-class{color:#91d7f7}
+.french-score{font-size:clamp(25px,2.2vw,32px);letter-spacing:-.055em;line-height:1.05;color:#f5f4ff;margin-bottom:12px}
+.french-rank-caption{font:7px "DM Mono",monospace;letter-spacing:.085em;color:#8f9ab7;margin-bottom:2px}
+.french-rank-number{font-size:19px;line-height:1.2;font-weight:800;letter-spacing:-.035em;color:#d7d1ff}
+.french-rank-ten .french-rank-number{color:#b8eaff}
+.french-foot{margin-top:auto}
+@media(max-width:900px){.french-score{font-size:30px}}
+@media(max-width:680px){.french-rank-grid{gap:10px}.french-rank-card{padding:14px 12px}.french-score{font-size:32px}.french-rank-caption{font-size:8px}}
+
+
+
+:root{--bg:#090d18;--panel:#11182a;--panel2:#151e33;--text:#f4f6ff;--muted:#9ba8c4;--faint:#65728f;--line:rgba(164,183,230,.16);--violet:#a99cff;--blue:#74d9ff;--mint:#8be1c2;--electric:#d8ff7f;--rose:#ff91c8;--max:1190px;--pointer-x:50vw;--pointer-y:35vh}
+html{scroll-padding-top:104px;max-width:100%;overflow-x:clip}body{max-width:100%;overflow-x:clip;background:radial-gradient(ellipse at 82% 4%,rgba(107,96,219,.12),transparent 31rem),radial-gradient(ellipse at 3% 41%,rgba(49,130,160,.065),transparent 30rem),var(--bg)}body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.16;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.87' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+.site-header{background:rgba(9,13,24,.78);border-bottom-color:rgba(164,183,230,.13)}.nav{height:80px}.brand{letter-spacing:.15em}.brand-mark{border-radius:9px;background:linear-gradient(145deg,rgba(216,255,127,.13),rgba(169,156,255,.1));border-color:rgba(216,255,127,.5);color:var(--electric);box-shadow:inset 0 0 14px rgba(216,255,127,.05)}.nav-links{gap:25px}.nav-links .nav-cta{display:inline-flex;align-items:center;gap:12px;background:rgba(216,255,127,.08);border:1px solid rgba(216,255,127,.25);font:600 11px "Space Grotesk",sans-serif;color:var(--text);cursor:pointer}.nav-cta kbd{font:9px "IBM Plex Mono",monospace;border:1px solid rgba(216,255,127,.3);color:var(--electric);border-radius:4px;padding:3px 5px;background:rgba(9,13,24,.55)}
+.hero{min-height:680px;padding-top:72px;padding-bottom:98px;column-gap:30px}.hero:before{opacity:.13;background-image:linear-gradient(rgba(169,156,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(169,156,255,.12) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(90deg,transparent,black 5%,black 73%,transparent)}.hero-copy{position:relative;z-index:2}.eyebrow{color:var(--electric);font-size:9px;letter-spacing:.16em}.live-dot{background:var(--electric);box-shadow:0 0 15px rgba(216,255,127,.68)}.hero h1{font-size:clamp(46px,5.3vw,72px);line-height:1.04;letter-spacing:-.072em;max-width:750px}.gradient-text{background:linear-gradient(100deg,var(--electric) 0%,#b6a8ff 48%,var(--blue) 95%);background-clip:text;-webkit-background-clip:text}.hero-intro{max-width:525px;font-size:14px;line-height:1.95}.button{border-radius:9px;min-height:48px;letter-spacing:-.01em}.button-primary{background:var(--electric);box-shadow:0 7px 32px rgba(216,255,127,.12);color:#11170a}.button-secondary{border-color:rgba(169,156,255,.27);background:rgba(255,255,255,.025)}.hero-note{color:#8e9ab6}.note-line{background:var(--electric);width:31px}.hero-bottomline{color:#69758f;letter-spacing:.15em}
+/* Signature hero artwork: vector geometry, UI-like details, and restrained motion. */
+.hero-visual{height:468px;transform:none!important;margin:0!important;isolation:isolate;overflow:visible;perspective:1000px}.particle-canvas{opacity:.68}.orbit,.core-card,.float-chip{display:none!important}.specimen-orbit{position:absolute;border:1px solid rgba(169,156,255,.22);border-radius:50%;pointer-events:none}.specimen-orbit-a{width:370px;height:370px;transform:rotateX(63deg) rotateZ(-21deg);animation:specimenOrbit 21s linear infinite}.specimen-orbit-b{width:320px;height:320px;border-style:dashed;border-color:rgba(116,217,255,.18);transform:rotateX(60deg) rotateZ(34deg);animation:specimenOrbit 34s linear infinite reverse}.specimen-panel{position:relative;z-index:2;width:min(100%,410px);min-height:355px;margin:auto;transform:rotateY(-8deg) rotateX(3deg);border:1px solid rgba(169,156,255,.32);border-radius:18px;overflow:hidden;background:linear-gradient(145deg,rgba(22,31,55,.97),rgba(11,17,31,.97) 62%,rgba(20,29,49,.96));box-shadow:0 34px 90px rgba(0,0,0,.35),0 0 70px rgba(108,94,205,.11),inset 0 1px rgba(255,255,255,.07);animation:specimenFloat 7s ease-in-out infinite}.specimen-panel:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(216,255,127,.035),transparent 34%,rgba(116,217,255,.04));z-index:0}.specimen-top{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;border-bottom:1px solid rgba(164,183,230,.12);position:relative;z-index:1}.specimen-index,.specimen-live,.specimen-label,.specimen-coordinate,.visual-caption,.specimen-float small,.specimen-footer,.explorer-kicker,.explorer-footer,.explorer-window-top,.palette-search-label,.palette-bottom{font-family:"IBM Plex Mono",monospace;letter-spacing:.12em}.specimen-index{font-size:8px;color:#9ca9c6}.specimen-live{display:flex;align-items:center;gap:7px;font-size:7px;color:#d8e8ab}.specimen-live i,.explorer-footer i{width:5px;height:5px;border-radius:50%;background:var(--electric);box-shadow:0 0 8px rgba(216,255,127,.8)}.specimen-live i{display:inline-block}.specimen-art{height:232px;position:relative;display:grid;place-items:center;margin:0 14px;border-bottom:1px solid rgba(164,183,230,.1)}.specimen-svg{height:100%;width:100%;max-width:320px;overflow:visible}.specimen-coordinate{position:absolute;font-size:7px;color:#7786a7}.coordinate-a{right:8px;top:21px;writing-mode:vertical-rl}.coordinate-b{left:8px;bottom:15px;color:var(--electric)}.specimen-bottom{padding:18px 20px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1}.specimen-label{display:block;font-size:7px;color:#8290ad;margin-bottom:6px}.specimen-bottom strong{font-size:12px;font-weight:600;letter-spacing:-.02em}.specimen-mark{font-size:26px;font-weight:700;letter-spacing:-.12em;color:var(--electric)}.specimen-mark span{color:var(--violet)}.specimen-float{position:absolute;z-index:4;display:flex;align-items:center;gap:11px;padding:12px 13px;border:1px solid rgba(164,183,230,.2);border-radius:11px;background:rgba(16,24,43,.96);box-shadow:0 13px 38px rgba(0,0,0,.24);backdrop-filter:blur(12px);animation:specimenFloat 5s ease-in-out infinite}.specimen-float-top{top:47px;right:-9px}.specimen-float-bottom{bottom:4px;left:-7px;animation-delay:-2.2s}.specimen-float-icon{display:grid;place-items:center;width:33px;height:33px;border-radius:8px;border:1px solid rgba(169,156,255,.25);background:rgba(169,156,255,.1);color:#c8bdff;font:12px "IBM Plex Mono",monospace}.specimen-icon-lime{border-color:rgba(216,255,127,.25);background:rgba(216,255,127,.09);color:var(--electric);font-size:17px}.specimen-float small{display:block;font-size:7px;color:#7f8eae;margin-bottom:4px}.specimen-float strong{display:block;font-size:10px;white-space:nowrap}.float-signal{width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px var(--blue);margin-left:5px}.visual-caption{bottom:-1px;left:0;right:0;text-align:center;color:#73809b;font-size:8px}.hero-bottomline{bottom:25px}.hero-bottomline span:last-child{color:var(--electric)}
+@keyframes specimenFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}@keyframes specimenOrbit{to{rotate:360deg}}
+.signal-strip{display:flex;align-items:center;gap:24px;padding:17px 0 20px;border-block:1px solid rgba(164,183,230,.1);overflow:hidden;white-space:nowrap;color:#8996b2;font:8px "IBM Plex Mono",monospace;letter-spacing:.14em}.signal-intro{color:#d8ff7f}.signal-strip b{color:#7886a6;font-size:10px;padding-left:16px}.signal-strip span:not(.signal-intro){display:inline-flex;align-items:center;gap:5px}
+.section{padding-top:110px;padding-bottom:110px}.section-tinted{position:relative;background:linear-gradient(180deg,rgba(18,26,46,.88),rgba(14,20,35,.72));border-block-color:rgba(164,183,230,.1)}.section-tinted:before{content:"";position:absolute;right:0;top:0;width:26%;height:1px;background:linear-gradient(90deg,transparent,var(--electric),transparent);opacity:.8}.section-heading{margin-bottom:45px}.section-heading h2,.now-card h2,.contact-inner h2{font-size:clamp(37px,4.2vw,52px);letter-spacing:-.07em;line-height:1.06}.muted-heading{color:#72809e}.about-grid{gap:90px}.about-copy .large-copy{font-size:18px;line-height:1.8;letter-spacing:-.025em;color:#edf0ff}.about-copy p{font-size:13px}.principles-card{border-radius:16px;padding:25px 27px;background:linear-gradient(145deg,rgba(169,156,255,.06),rgba(255,255,255,.012));border-color:rgba(169,156,255,.2)}.principle{padding:17px 0}.principle-num{color:var(--electric)}.principle strong{font-size:13px}.principle small{font-size:11px}.heading-aside{font-size:12px}.project-card{border-radius:18px;background:linear-gradient(145deg,rgba(14,20,35,.94),rgba(9,14,25,.94));border-color:rgba(169,156,255,.24);box-shadow:0 32px 90px rgba(0,0,0,.2)}.project-topline{background:rgba(255,255,255,.015)}.project-number{color:var(--electric)}.status{color:#d1d9ea}.status span{background:var(--electric);box-shadow:0 0 9px rgba(216,255,127,.45)}.project-content{grid-template-columns:1fr .93fr;gap:36px;padding:38px}.project-type{color:#9c9be9}.project-info h3{font-size:32px;letter-spacing:-.06em}.project-info>p:not(.project-type):not(.honesty-note){font-size:13px;line-height:1.9}.tag-row span{border-radius:6px;color:#d0d8ec}.honesty-note{border-left-color:var(--electric);font-size:11px}.honesty-note span{color:var(--electric)}
+/* A functional, custom project notebook instead of a static decorative terminal. */
+.project-explorer{align-self:stretch;min-width:0;border:1px solid rgba(116,217,255,.2);border-radius:13px;overflow:hidden;background:rgba(7,12,23,.7);box-shadow:inset 0 1px rgba(255,255,255,.035)}.explorer-window-top{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;background:rgba(255,255,255,.025);border-bottom:1px solid rgba(164,183,230,.1);color:#7c8baa;font-size:7px}.explorer-dots{display:flex;gap:4px}.explorer-dots i{width:6px;height:6px;border-radius:50%;background:#677493}.explorer-dots i:first-child{background:#ff91c8}.explorer-dots i:nth-child(2){background:#d8ff7f}.explorer-dots i:nth-child(3){background:#74d9ff}.explorer-window-number{color:var(--electric)}.explorer-tabs{display:flex;gap:3px;padding:9px 10px;border-bottom:1px solid rgba(164,183,230,.1)}.explorer-tab{border:1px solid transparent;background:transparent;color:#8491ac;padding:8px 10px;border-radius:7px;font:10px "Space Grotesk",sans-serif;cursor:pointer;transition:.2s}.explorer-tab:hover{color:#fff;background:rgba(255,255,255,.035)}.explorer-tab.is-active{color:var(--electric);border-color:rgba(216,255,127,.18);background:rgba(216,255,127,.07)}.explorer-panel{padding:25px 22px 22px;min-height:225px;animation:panelIn .3s ease both}.explorer-panel[hidden]{display:none}.explorer-kicker{margin:0 0 10px;color:#85cfe8;font-size:8px}.explorer-panel h4{font-size:18px;line-height:1.3;letter-spacing:-.04em;margin:0 0 11px}.explorer-panel p:not(.explorer-kicker){color:#a6b2cb;font-size:11px;line-height:1.8;margin:0;max-width:360px}.explorer-panel ul{padding-left:17px;margin:8px 0;color:#a6b2cb;font-size:10px;line-height:2}.explorer-panel li::marker{color:var(--electric)}.explorer-disclaimer{font-size:9px!important;color:#73809b!important;margin-top:10px!important}.explorer-progress{margin-top:24px}.explorer-progress>span,.explorer-progress>strong{display:block;font:8px "IBM Plex Mono",monospace;letter-spacing:.11em}.explorer-progress>span{color:#73809b;margin-bottom:7px}.explorer-progress>strong{color:var(--electric);font-size:9px}.explorer-progress>div{height:3px;border-radius:4px;background:#242d42;overflow:hidden;margin-top:8px}.explorer-progress>div i{display:block;width:29%;height:100%;background:linear-gradient(90deg,var(--electric),var(--violet));border-radius:4px}.explorer-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;border-top:1px solid rgba(164,183,230,.1);color:#71809e;font-size:7px}.explorer-footer span:first-child{display:flex;align-items:center;gap:7px}.explorer-footer i{display:inline-block;width:5px;height:5px}.project-footer{color:#73809b}
+.project-practice-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:17px;border:1px solid rgba(164,183,230,.12);border-radius:13px;background:rgba(255,255,255,.014);overflow:hidden}.project-practice-row>div{padding:20px 22px;border-right:1px solid rgba(164,183,230,.1)}.project-practice-row>div:last-child{border-right:0}.project-practice-row>div>span{display:block;color:var(--electric);font:8px "IBM Plex Mono",monospace;margin-bottom:11px}.project-practice-row strong{font-size:12px}.project-practice-row p{font-size:10px;color:#8e9ab6;line-height:1.7;margin:5px 0 0}
+.milestone-heading{display:flex;align-items:end;justify-content:space-between;gap:25px}.milestone-heading .section-heading{margin-bottom:0}.filter-hint{max-width:230px;text-align:right;font-size:11px;color:#7785a2;margin:0 0 5px}.achievement-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:-13px 0 25px}.achievement-filter{display:inline-flex;align-items:center;gap:15px;border:1px solid rgba(164,183,230,.17);border-radius:8px;padding:9px 12px;background:rgba(255,255,255,.018);color:#a0acc5;font:10px "Space Grotesk",sans-serif;cursor:pointer;transition:all .2s}.achievement-filter span{font:8px "IBM Plex Mono",monospace;color:#687793}.achievement-filter:hover{border-color:rgba(216,255,127,.35);color:#fff}.achievement-filter.is-active{border-color:rgba(216,255,127,.45);background:rgba(216,255,127,.09);color:var(--electric)}.achievement-filter.is-active span{color:var(--electric)}.milestone-grid{gap:14px}.milestone{position:relative;border-radius:15px;padding:26px 24px;background:linear-gradient(145deg,rgba(19,27,47,.72),rgba(12,17,30,.84));border-color:rgba(164,183,230,.13);min-height:260px;overflow:hidden}.milestone:before{content:"";position:absolute;right:-45px;top:-45px;width:120px;height:120px;border:1px solid rgba(169,156,255,.13);border-radius:50%;box-shadow:0 0 0 15px rgba(169,156,255,.025),0 0 0 30px rgba(169,156,255,.018);pointer-events:none}.milestone-icon{border-radius:10px!important;background:rgba(169,156,255,.09)!important;border-color:rgba(169,156,255,.18)!important;color:#c3bbff!important}.milestone-category{font-size:8px;letter-spacing:.15em;color:#8fa0c2}.milestone h3{font-size:23px;letter-spacing:-.055em;max-width:340px}.milestone>p:not(.milestone-category):not(.french-intro){font-size:11px;line-height:1.9;color:#9ba8c4}.milestone-foot{color:#6e7d9e;font-size:8px}.milestone[data-category="sport"] .milestone-icon{color:var(--electric)!important;background:rgba(216,255,127,.08)!important;border-color:rgba(216,255,127,.18)!important}.milestone[data-category="stem"] .milestone-icon{color:var(--blue)!important;background:rgba(116,217,255,.08)!important;border-color:rgba(116,217,255,.18)!important}.milestone.is-filtered-out{display:none}.french-rank-card{border-radius:11px;background:linear-gradient(145deg,rgba(169,156,255,.1),rgba(255,255,255,.012))}.french-rank-ten{background:linear-gradient(145deg,rgba(116,217,255,.09),rgba(255,255,255,.012))}.french-score{font-size:34px}.french-rank-number{font-size:23px}.french-rank-caption{font-size:7px}.footnote{font-size:10px;color:#64728e}
+.beyond-cards-grid{gap:15px}.sports-card{border-radius:16px;background:radial-gradient(circle at 100% 0%,rgba(216,255,127,.07),transparent 42%),linear-gradient(145deg,#111a2e,#0e1525);border-color:rgba(216,255,127,.16)}.sports-head{position:relative;z-index:1}.sports-head .basketball-mark{border-radius:9px}.sport-kicker{font-size:8px;color:#b1bdce}.sports-card h3{font-size:30px;letter-spacing:-.06em}.sports-card p{font-size:11px;line-height:1.9;color:#a1aec8}.court-graphic{margin:6px 0 22px;padding:8px;border:1px solid rgba(216,255,127,.15);border-radius:10px;background:rgba(216,255,127,.025);color:#d4e1b4}.court-graphic svg{display:block;width:100%;height:auto}.court-graphic span{display:block;font:7px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#9eaf9e;margin:7px 0 0 4px}.sports-highlight>div{border-radius:8px!important;background:rgba(255,255,255,.025);border-color:rgba(164,183,230,.14)!important}.sports-highlight strong{color:var(--electric)}.sports-small{color:#7785a2;font-size:8px}.beyond-card-speaking{background:radial-gradient(circle at 100% 0%,rgba(116,217,255,.1),transparent 45%),linear-gradient(145deg,#111a2e,#0e1525)}.beyond-card-beehes{background:radial-gradient(circle at 100% 0%,rgba(169,156,255,.11),transparent 45%),linear-gradient(145deg,#111a2e,#0e1525)}.beyond-points span{border-radius:6px;color:#c0d7e8}
+.now-card{border-radius:17px;background:linear-gradient(135deg,rgba(169,156,255,.07),rgba(116,217,255,.025));border-color:rgba(169,156,255,.2);padding:44px}.now-card h2{font-size:clamp(34px,3.4vw,43px)}.now-item strong{font-size:13px}.now-item p{font-size:11px;color:#8f9fbb}.now-tag{color:var(--electric);font-size:8px}.contact-section{background:radial-gradient(ellipse at 50% -10%,rgba(108,94,205,.2),transparent 60%),#080b14;border-top-color:rgba(164,183,230,.13)}.contact-inner h2{font-size:clamp(43px,5vw,65px)}.contact-edit-note{color:#75809a;font-size:10px}.site-footer{background:#080b14;border-top-color:rgba(164,183,230,.13)}.footer-inner>span{color:#77839d}.back-top{color:#a5b0c8}
+/* Searchable quick-jump interface. */
+body.palette-open{overflow:hidden}.palette-backdrop{position:fixed;inset:0;z-index:20000;display:grid;place-items:start center;padding:12vh 18px 24px;background:rgba(2,4,10,.72);backdrop-filter:blur(12px)}.palette-backdrop[hidden]{display:none}.command-palette{width:min(560px,100%);border:1px solid rgba(169,156,255,.28);border-radius:18px;background:linear-gradient(155deg,#141d31,#0b101d);box-shadow:0 35px 120px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.025) inset;overflow:hidden;animation:panelIn .2s ease both}.palette-top{display:flex;align-items:center;gap:12px;padding:19px 20px;border-bottom:1px solid rgba(164,183,230,.12)}.palette-symbol{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(216,255,127,.26);border-radius:10px;background:rgba(216,255,127,.08);color:var(--electric);font-size:20px}.palette-top>div{flex:1}.palette-top p{font-size:14px;font-weight:700;margin:0}.palette-top small{font-size:10px;color:#8795b2}.palette-close{border:1px solid rgba(164,183,230,.18);border-radius:6px;background:rgba(255,255,255,.025);padding:6px 7px;color:#8795b2;font:9px "IBM Plex Mono",monospace;cursor:pointer}.palette-search-label{display:block;margin:17px 20px 7px;font-size:8px;color:#7888a7}.palette-search{display:block;width:calc(100% - 40px);margin:0 20px 15px;border:1px solid rgba(164,183,230,.18);border-radius:9px;padding:12px 13px;outline:0;background:rgba(4,8,16,.7);color:#f4f6ff;font:12px "Space Grotesk",sans-serif}.palette-search:focus{border-color:rgba(216,255,127,.45);box-shadow:0 0 0 3px rgba(216,255,127,.055)}.palette-results{display:grid;padding:0 9px 10px;max-height:330px;overflow:auto}.palette-results a{display:flex;align-items:center;gap:12px;padding:11px;border:1px solid transparent;border-radius:9px;transition:background .15s,border-color .15s}.palette-results a[hidden]{display:none}.palette-results a:hover,.palette-results a.is-highlighted{background:rgba(169,156,255,.08);border-color:rgba(169,156,255,.18)}.palette-result-icon{display:grid;place-items:center;width:31px;height:31px;flex:none;border-radius:8px;background:rgba(169,156,255,.1);color:#c7bdff;font:11px "IBM Plex Mono",monospace}.palette-results a>span:nth-child(2){flex:1}.palette-results strong,.palette-results small{display:block}.palette-results strong{font-size:11px}.palette-results small{font-size:9px;color:#8391ad;margin-top:3px}.palette-results kbd,.palette-bottom kbd{border:1px solid rgba(164,183,230,.16);border-radius:4px;padding:3px 5px;color:#7483a1;font:8px "IBM Plex Mono",monospace}.palette-bottom{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:12px 19px;border-top:1px solid rgba(164,183,230,.12);background:rgba(255,255,255,.018);color:#7483a1;font-size:7px}.palette-bottom kbd{margin-right:3px}
+@keyframes panelIn{from{opacity:0;transform:translateY(6px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+.nav-links a.is-active:not(.nav-cta){color:#f5f7ff}.nav-links a.is-active:not(.nav-cta):after{right:0;background:var(--electric)}.button-primary{background:var(--electric);color:#0d1405}.button-primary:after{background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.53) 50%,transparent 65%)}.project-card:hover{border-color:rgba(216,255,127,.25)}.milestone:hover{border-color:rgba(216,255,127,.3)}
+@media(max-width:900px){.hero{grid-template-columns:1fr .86fr;gap:12px}.hero-visual{transform:none!important;margin:0!important}.specimen-panel{width:100%;min-height:340px}.specimen-float-top{right:-6px}.specimen-float-bottom{left:-7px}.specimen-float{padding:10px}.specimen-float strong{font-size:9px}.project-content{grid-template-columns:1fr .95fr;gap:22px;padding:26px}.explorer-tabs{gap:0;padding:7px}.explorer-tab{padding:8px 7px;font-size:9px}.explorer-panel{padding:21px 17px}.about-grid{gap:45px}}
+@media(max-width:680px){.nav{height:68px}.nav-links{top:67px;background:#0d1423}.nav-links .nav-cta{justify-content:center}.hero{grid-template-columns:1fr;padding-top:54px;padding-bottom:83px;gap:5px;min-height:0}.hero h1{font-size:clamp(43px,11.6vw,62px);max-width:570px}.hero-intro{font-size:13px}.hero-visual{height:385px;max-width:490px;width:100%;margin:0 auto!important;transform:none!important}.specimen-panel{width:min(100% - 20px,390px);min-height:330px;transform:none}.specimen-art{height:211px}.specimen-float-top{right:-1px;top:30px}.specimen-float-bottom{left:0;bottom:7px}.specimen-float strong{font-size:9px}.specimen-float small{font-size:6px}.specimen-float-icon{width:29px;height:29px}.specimen-orbit-a{width:320px;height:320px}.specimen-orbit-b{width:290px;height:290px}.visual-caption{font-size:7px;bottom:0}.hero-bottomline{font-size:7px;bottom:19px}.signal-strip{gap:12px 14px;padding:15px 0;overflow:hidden;scrollbar-width:none;white-space:normal;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.signal-strip::-webkit-scrollbar{display:none}.signal-intro{display:none}.signal-strip span:not(.signal-intro){display:flex;min-width:0;flex-wrap:wrap;align-items:center;gap:5px;white-space:normal}.signal-strip span:last-child{grid-column:1/-1}.section{padding-top:78px;padding-bottom:78px}.section-heading h2,.now-card h2{font-size:36px}.about-grid{gap:25px}.about-copy .large-copy{font-size:16px}.heading-row,.milestone-heading{display:grid;gap:15px;align-items:start}.filter-hint{text-align:left;margin:0;max-width:none}.project-content{grid-template-columns:1fr;gap:25px;padding:23px 18px}.project-info h3{font-size:30px}.project-explorer{min-width:0}.explorer-panel{min-height:220px}.project-practice-row{grid-template-columns:1fr}.project-practice-row>div{border-right:0;border-bottom:1px solid rgba(164,183,230,.1);padding:16px 18px;display:grid;grid-template-columns:30px 1fr;align-items:baseline;gap:8px}.project-practice-row>div:last-child{border-bottom:0}.project-practice-row>div>span{margin:0}.project-practice-row p{grid-column:2;margin-top:-3px}.achievement-filters{gap:6px;margin:0 0 20px}.achievement-filter{gap:8px;padding:9px 10px}.milestone-grid{grid-template-columns:1fr}.milestone{min-height:0;padding:24px}.milestone h3{font-size:24px}.french-score{font-size:32px}.beyond-cards-grid{grid-template-columns:1fr}.court-graphic{margin-top:8px}.now-card{padding:25px 20px;gap:25px}.now-item{grid-template-columns:8px 1fr;gap:12px}.now-tag{grid-column:2}.contact-section{padding:78px 0}.contact-inner h2{font-size:clamp(39px,10vw,49px)}.footer-inner{padding:18px 0;flex-wrap:wrap}.footer-inner>span{order:3;width:100%}.palette-backdrop{padding:8vh 10px 16px}.palette-top{padding:16px}.palette-search{width:calc(100% - 32px);margin-inline:16px}.palette-search-label{margin-inline:16px}.palette-bottom{font-size:6px}.palette-results{max-height:47vh}}
+@media(prefers-reduced-motion:reduce){.specimen-panel,.specimen-orbit-a,.specimen-orbit-b,.specimen-float{animation:none!important}.command-palette,.explorer-panel{animation:none!important}}
+
+
+
+:root{color-scheme:dark}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:0 11px;border:1px solid var(--line);border-radius:7px;background:rgba(255,255,255,.025);color:var(--text);font:600 11px "Space Grotesk",system-ui,sans-serif;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.theme-toggle:hover{border-color:rgba(216,255,127,.4);transform:translateY(-1px)}
+.theme-toggle:focus-visible,.button:focus-visible,.nav-links a:focus-visible,.menu-toggle:focus-visible{outline:2px solid var(--electric,#d8ff7f);outline-offset:3px}
+.theme-toggle-icon{font-size:16px;line-height:1;color:var(--electric,#d8ff7f)}
+.portfolio-actions{margin-top:25px}
+.portfolio-actions button{font-family:inherit;cursor:pointer}
+.contact-action-status{min-height:1.6em;margin:13px 0 0;color:var(--electric,#d8ff7f);font-size:11px}
+/* Alternative light theme; card and code windows retain visual separation. */
+html[data-theme="light"]{color-scheme:light;--bg:#f4f6fb;--panel:#ffffff;--panel2:#e9edf7;--text:#182238;--muted:#58647c;--faint:#73809a;--line:rgba(24,34,56,.16);--violet:#6553c9;--blue:#167db3;--orange:#a85b1b;--mint:#28765d;--electric:#4c671d}
+html[data-theme="light"] body{background:var(--bg);color:var(--text)}
+html[data-theme="light"] .site-header{background:rgba(245,247,252,.9);border-color:var(--line)}
+html[data-theme="light"] .nav-links{color:#526078}
+html[data-theme="light"] .nav-links a:hover{color:#111a2e}
+html[data-theme="light"] .nav-links .nav-cta,html[data-theme="light"] .theme-toggle{color:#182238;background:rgba(255,255,255,.8);border-color:rgba(24,34,56,.16)}
+html[data-theme="light"] .hero:before{opacity:.42;background-image:linear-gradient(rgba(101,83,201,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(101,83,201,.08) 1px,transparent 1px)}
+html[data-theme="light"] .gradient-text{background-image:linear-gradient(100deg,#6553c9 5%,#167db3 56%,#28765d 100%)}
+html[data-theme="light"] .muted-heading{color:#68748d}
+html[data-theme="light"] .hero-intro,html[data-theme="light"] .about-copy p,html[data-theme="light"] .heading-aside,html[data-theme="light"] .project-info>p:not(.project-type):not(.honesty-note),html[data-theme="light"] .now-item p,html[data-theme="light"] .contact-inner>p:not(.eyebrow),html[data-theme="light"] .sports-card p,html[data-theme="light"] .milestone>p:not(.milestone-category):not(.french-intro){color:#59657b}
+html[data-theme="light"] .about-copy .large-copy{color:#202c44}
+html[data-theme="light"] .section-tinted{background:linear-gradient(180deg,rgba(232,237,248,.93),rgba(243,246,251,.94));border-color:rgba(24,34,56,.09)}
+html[data-theme="light"] .principles-card,html[data-theme="light"] .milestone,html[data-theme="light"] .now-card,html[data-theme="light"] .project-practice-row{background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(235,239,248,.8));border-color:rgba(24,34,56,.14)}
+html[data-theme="light"] .project-card{background:#fff;border-color:rgba(101,83,201,.22);box-shadow:0 20px 55px rgba(31,43,69,.08)}
+html[data-theme="light"] .project-topline,html[data-theme="light"] .project-footer{color:#69748b;border-color:rgba(24,34,56,.12)}
+html[data-theme="light"] .project-explorer{background:#f7f9fd;border-color:rgba(22,125,179,.22)}
+html[data-theme="light"] .explorer-window-top,html[data-theme="light"] .explorer-tabs,html[data-theme="light"] .explorer-footer{border-color:rgba(24,34,56,.12);color:#65718a}
+html[data-theme="light"] .explorer-tab{color:#526078}
+html[data-theme="light"] .explorer-tab:hover{color:#172238;background:rgba(24,34,56,.04)}
+html[data-theme="light"] .explorer-tab.is-active{color:#3e5416;background:rgba(132,170,55,.12);border-color:rgba(76,103,29,.25)}
+html[data-theme="light"] .explorer-panel h4{color:#182238}
+html[data-theme="light"] .explorer-panel p:not(.explorer-kicker),html[data-theme="light"] .explorer-panel ul{color:#59657b}
+html[data-theme="light"] .explorer-progress>div{background:#dce2ef}
+html[data-theme="light"] .project-practice-row>div{border-color:rgba(24,34,56,.12)}
+html[data-theme="light"] .project-practice-row strong,html[data-theme="light"] .principle strong,html[data-theme="light"] .now-item strong{color:#182238}
+html[data-theme="light"] .project-practice-row p,html[data-theme="light"] .principle small{color:#637089}
+html[data-theme="light"] .achievement-filter{background:#fff;color:#526078;border-color:rgba(24,34,56,.14)}
+html[data-theme="light"] .achievement-filter.is-active{color:#3e5416;background:rgba(132,170,55,.12);border-color:rgba(76,103,29,.32)}
+html[data-theme="light"] .milestone-icon{background:rgba(101,83,201,.08)!important;color:#6553c9!important;border-color:rgba(101,83,201,.2)!important}
+html[data-theme="light"] .sports-card,html[data-theme="light"] .beyond-card-speaking,html[data-theme="light"] .beyond-card-beehes{background:linear-gradient(145deg,#fff,#edf2f8);border-color:rgba(24,34,56,.14)}
+html[data-theme="light"] .sport-kicker,html[data-theme="light"] .sports-small{color:#637089}
+html[data-theme="light"] .court-graphic{background:rgba(76,103,29,.035);border-color:rgba(76,103,29,.17);color:#4c671d}
+html[data-theme="light"] .sports-highlight>div{background:#f2f5fa;border-color:rgba(24,34,56,.12)!important}
+html[data-theme="light"] .sports-highlight strong{color:#4c671d}
+html[data-theme="light"] .contact-section,html[data-theme="light"] .site-footer{background:#e9edf7;border-color:rgba(24,34,56,.12)}
+html[data-theme="light"] .contact-edit-note,html[data-theme="light"] .footer-inner>span,html[data-theme="light"] .back-top{color:#5e6a82}
+html[data-theme="light"] .palette-backdrop{background:rgba(24,34,56,.3)}
+html[data-theme="light"] .command-palette{background:#fff;color:#182238;border-color:rgba(24,34,56,.18);box-shadow:0 25px 80px rgba(20,32,57,.2)}
+html[data-theme="light"] .palette-top,html[data-theme="light"] .palette-bottom{border-color:rgba(24,34,56,.12);color:#637089}
+html[data-theme="light"] .palette-top small,html[data-theme="light"] .palette-results a small{color:#69758c}
+html[data-theme="light"] .palette-results a{border-color:rgba(24,34,56,.1)}
+html[data-theme="light"] .palette-results a:hover,html[data-theme="light"] .palette-results a.is-highlighted{background:#f0f3fa}
+html[data-theme="light"] .float-chip{background:#fff;color:#182238;border-color:rgba(24,34,56,.15);box-shadow:0 10px 28px rgba(31,43,69,.12)}
+html[data-theme="light"] .specimen-panel{background:linear-gradient(150deg,rgba(255,255,255,.98),rgba(236,241,250,.97));border-color:rgba(101,83,201,.25);box-shadow:0 26px 80px rgba(40,50,80,.12)}
+html[data-theme="light"] .specimen-top{border-color:rgba(24,34,56,.12);color:#64718a}
+html[data-theme="light"] .specimen-bottom strong{color:#182238}
+html[data-theme="light"] .specimen-label,html[data-theme="light"] .specimen-coordinate,html[data-theme="light"] .visual-caption{color:#65718a}
+html[data-theme="light"] .signal-strip{color:#58647c;border-color:rgba(24,34,56,.12)}
+html[data-theme="light"] .hero-bottomline{color:#6e7a91}
+html[data-theme="light"] .button-secondary{color:#182238;background:#fff;border-color:rgba(24,34,56,.17)}
+@media(max-width:680px){.theme-toggle{width:100%;justify-content:center}.nav-links.open .theme-toggle{display:inline-flex}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.theme-toggle,.button{transition:none!important}}
+@media print{
+  @page{size:A4;margin:13mm}
+  :root{color-scheme:light;--text:#182238;--muted:#4d586e;--line:#d5dbe6}
+  html,body{background:#fff!important;color:#182238!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  body{font-size:10pt;line-height:1.45}
+  .scroll-progress,.ambient-glow,.site-header,.menu-toggle,.hero-visual,.hero-bottomline,.signal-strip,.palette-backdrop,.owner-edit-toolbar,#owner-edit-toolbar,.portfolio-actions,.contact-action-status,.contact-edit-note,.back-top{display:none!important}
+  .wrap{width:100%;max-width:none;margin:0}
+  .hero{display:block;min-height:0;padding:8mm 0 5mm}
+  .hero h1{font-size:30pt;max-width:none}
+  .hero-intro{font-size:10pt;max-width:none;margin:4mm 0;color:#4d586e!important}
+  .hero-note{margin-top:3mm;color:#59657b}
+  .hero-actions{display:none}
+  .section{padding:7mm 0;break-inside:auto}
+  .section-tinted,.contact-section,.site-footer{background:#fff!important;border-color:#d5dbe6!important}
+  .section-heading{margin-bottom:4mm}
+  .section-heading h2,.now-card h2,.contact-inner h2{font-size:21pt;color:#182238!important}
+  .muted-heading{color:#64718a!important}
+  .about-grid{grid-template-columns:1.15fr .85fr;gap:8mm}
+  .about-copy .large-copy{font-size:11pt;color:#26334a!important}
+  .about-copy p,.principle small,.project-info>p:not(.project-type):not(.honesty-note),.milestone>p:not(.milestone-category):not(.french-intro),.sports-card p,.now-item p{color:#4d586e!important;font-size:8.5pt}
+  .principles-card,.project-card,.project-explorer,.milestone,.sports-card,.now-card,.beyond-card-speaking,.beyond-card-beehes{background:#fff!important;color:#182238!important;border:1px solid #d5dbe6!important;box-shadow:none!important;break-inside:avoid}
+  .project-content{grid-template-columns:1fr 1fr;gap:6mm;padding:5mm}
+  .project-info h3,.coming-card h3,.milestone h3,.sports-card h3{font-size:16pt;color:#182238!important}
+  .explorer-panel{min-height:0;padding:4mm}
+  .explorer-panel h4,.principle strong,.now-item strong{color:#182238!important}
+  .explorer-panel p:not(.explorer-kicker),.explorer-panel ul{color:#4d586e!important}
+  .project-practice-row{background:#fff!important;border-color:#d5dbe6!important}
+  .project-practice-row>div{padding:4mm;border-color:#d5dbe6!important}
+  .project-practice-row strong{color:#182238!important}
+  .project-practice-row p{color:#4d586e!important}
+  .achievement-filters{display:none!important}
+  .milestone-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4mm}
+  .milestone,.milestone.is-filtered-out{display:block!important;min-height:0;padding:4mm;break-inside:avoid}
+  .milestone:before{display:none}
+  .milestone-icon{background:#f2f4fa!important}
+  .french-rank-grid{gap:2mm}
+  .now-card{padding:5mm;gap:7mm}
+  .contact-section{padding:5mm 0!important}
+  .contact-inner>p{color:#4d586e!important}
+  .site-footer{padding:3mm 0}
+  .footer-inner{padding:0}
+  .reveal{opacity:1!important;transform:none!important}
+  a{color:inherit!important}
+}
+
+
+
+#owner-edit-toolbar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:99999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;width:max-content;max-width:calc(100vw - 24px);padding:10px 12px;border:1px solid rgba(176,173,255,.35);border-radius:14px;background:rgba(9,14,29,.94);box-shadow:0 18px 60px rgba(0,0,0,.42);backdrop-filter:blur(18px);font:12px/1.4 system-ui,sans-serif;color:#f3f6ff}
+#owner-edit-toolbar .oet-label{font-weight:700;margin:0 8px 0 2px}
+#owner-edit-toolbar .oet-note{font-size:11px;color:#a0aac1;max-width:245px}
+#owner-edit-toolbar button{border:1px solid rgba(178,195,255,.2);border-radius:8px;padding:9px 12px;background:#17213a;color:#f3f6ff;font:700 12px system-ui,sans-serif;cursor:pointer}
+#owner-edit-toolbar button.primary{background:linear-gradient(100deg,#b8adff,#84d8ef);color:#080d19;border:0}
+#owner-edit-toolbar button:focus-visible{outline:2px solid #76c7ff;outline-offset:3px}
+body.owner-editing [contenteditable="true"]{outline:1px dashed rgba(118,199,255,.5);outline-offset:3px;caret-color:#b8adff}
+body.owner-editing a{cursor:text}
+@media(max-width:620px){#owner-edit-toolbar{bottom:8px;gap:6px;padding:8px}#owner-edit-toolbar .oet-note{display:none}#owner-edit-toolbar button{padding:8px 9px}}
+
+
+/* V4 multi-page portfolio additions */
+.skip-link{position:absolute;left:12px;top:-80px;z-index:100000;padding:10px 14px;background:var(--mint);color:#081018;border-radius:8px;font-weight:700}.skip-link:focus{top:12px}
+.page-hero{padding-top:82px;padding-bottom:54px;position:relative}.page-hero:after{content:"";position:absolute;right:7%;top:28px;width:240px;height:240px;border-radius:50%;border:1px solid var(--line);background:radial-gradient(circle at 35% 35%,rgba(155,140,255,.2),transparent 68%);z-index:-1;pointer-events:none}.page-hero h1{max-width:900px;font-size:clamp(42px,6.7vw,80px);line-height:.99;letter-spacing:-.065em;margin:20px 0 22px}.page-lead{max-width:760px;font-size:clamp(17px,2vw,21px);line-height:1.65;color:var(--muted)}.page-meta{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}.meta-pill{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:999px;padding:7px 11px;font:10px/1.3 "DM Mono",monospace;letter-spacing:.09em;color:var(--muted)}
+.page-section{padding:30px 0 70px}.page-section .section-heading h2{font-size:clamp(28px,4.3vw,48px)}.page-section h2{letter-spacing:-.045em}.page-section h3{letter-spacing:-.025em}.content-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch}.detail-panel,.status-panel,.learn-card,.roadmap-card,.profile-panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border-radius:18px;padding:clamp(22px,3vw,32px)}.detail-panel h2,.status-panel h2,.learn-card h3,.roadmap-card h3{margin-top:8px}.detail-panel p,.status-panel p,.learn-card p,.roadmap-card p{color:var(--muted)}.status-label{display:inline-flex;align-items:center;gap:8px;color:var(--mint);font:10px "DM Mono",monospace;letter-spacing:.12em}.status-label:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 14px rgba(139,225,194,.6)}.fact-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.fact-row:last-child{border-bottom:0}.fact-row span:first-child{color:var(--muted)}.fact-row strong{text-align:right;font-weight:600}.concept-figure{margin:22px 0 0;border:1px solid var(--line);border-radius:18px;padding:20px;background:radial-gradient(ellipse at 50% 0%,rgba(118,199,255,.09),transparent 65%),var(--panel);overflow:hidden}.concept-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:10px "DM Mono",monospace;letter-spacing:.12em;color:var(--muted);margin-bottom:20px}.concept-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center}.flow-node{min-height:112px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:13px;padding:15px;background:rgba(255,255,255,.025)}.flow-node strong{font-size:14px}.flow-node span{font:10px/1.5 "DM Mono",monospace;color:var(--muted)}.flow-node .flow-icon{font-size:24px;color:var(--mint)}.flow-arrow{color:var(--violet);font-size:20px}.figure-note{font:10px/1.5 "DM Mono",monospace;color:var(--faint);margin:16px 0 0}.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.learn-card .mini-number,.roadmap-num{font:11px "DM Mono",monospace;color:var(--mint);letter-spacing:.1em}.learn-card h3{font-size:19px;margin-bottom:8px}.tag-row a,.config-link-list a{color:var(--mint)}.honesty-banner{margin-top:18px;padding:14px 16px;border-left:2px solid var(--orange);background:rgba(255,177,123,.06);border-radius:0 10px 10px 0;color:var(--muted);font-size:13px}.timeline-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}.timeline-item{border-top:1px solid var(--line);padding:18px 4px 0;counter-increment:step}.timeline-item:before{content:"STEP 0" counter(step);display:block;font:10px "DM Mono",monospace;color:var(--violet);letter-spacing:.12em;margin-bottom:14px}.timeline-item h3{margin:0 0 8px;font-size:17px}.timeline-item p{margin:0;color:var(--muted);font-size:13px}.page-cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}.page-cta-row .button{cursor:pointer}.page-footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font:10px "DM Mono",monospace;letter-spacing:.1em;color:var(--muted)}.page-footer-links a:hover{color:var(--mint)}.case-study-link-row{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 0 8px}.case-study-link-row p{color:var(--muted);max-width:520px;margin:0;font-size:13px}.page-hero .button-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.social-card{min-height:145px;display:flex;flex-direction:column;justify-content:space-between;gap:15px;padding:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,rgba(255,255,255,.035),rgba(255,255,255,.012));transition:transform .2s,border-color .2s}.social-card:hover{transform:translateY(-3px);border-color:rgba(139,225,194,.5)}.social-card[hidden]{display:none}.social-grid[hidden]{display:none!important}.nav-links .active-nav{color:var(--text)}.social-symbol{font:19px "DM Mono",monospace;color:var(--mint)}.social-card strong{font-size:18px}.social-card span:last-child{color:var(--muted);font-size:12px}.empty-config-note{font-size:13px;color:var(--muted);padding:14px 16px;border:1px dashed var(--line);border-radius:12px;margin-top:16px}.empty-config-note[hidden]{display:none}.about-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.about-principle{padding:22px;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.025),transparent)}.about-principle .eyebrow{color:var(--mint)}.about-principle h3{margin:10px 0;font-size:21px}.about-principle p{color:var(--muted);font-size:13px}.profile-fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}.profile-fact{padding:16px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.018)}.profile-fact span{font:10px "DM Mono",monospace;color:var(--faint);letter-spacing:.1em}.profile-fact strong{display:block;margin-top:8px;font-size:15px}.breadcrumb{display:flex;gap:9px;align-items:center;color:var(--faint);font:10px "DM Mono",monospace;letter-spacing:.1em;margin-bottom:20px}.breadcrumb a{color:var(--muted)}.breadcrumb a:hover{color:var(--mint)}.milestone-page-note{color:var(--muted);font-size:13px;max-width:760px;margin-top:10px}.small-note{font-size:12px;color:var(--faint)}
+@media(max-width:850px){.content-grid{grid-template-columns:1fr}.three-grid,.timeline-list,.about-principles{grid-template-columns:1fr}.social-grid{grid-template-columns:repeat(2,1fr)}.page-hero{padding-top:54px}.page-hero:after{width:150px;height:150px;right:2%}.concept-flow{grid-template-columns:1fr}.flow-arrow{transform:rotate(90deg);justify-self:center}.flow-node{min-height:85px}.case-study-link-row{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.social-grid{grid-template-columns:1fr}.profile-fact-grid{grid-template-columns:1fr}.page-hero h1{font-size:clamp(38px,13vw,58px)}.page-meta{gap:7px}.meta-pill{font-size:9px}.detail-panel,.status-panel,.learn-card,.roadmap-card,.profile-panel{padding:20px}.concept-figure{padding:14px}}
+@media(prefers-reduced-motion:reduce){.social-card{transition:none}.social-card:hover{transform:none}}
+@media print{.site-header,.site-footer,.portfolio-actions,.owner-edit-toolbar,.page-cta-row,.social-grid{display:none!important}.page-hero{padding-top:20px}.page-section{padding-bottom:20px}.detail-panel,.status-panel,.learn-card,.roadmap-card,.profile-panel,.milestone{break-inside:avoid;background:white;color:#101522;border-color:#ccd2dd}.page-lead,.detail-panel p,.status-panel p,.learn-card p,.roadmap-card p,.fact-row span:first-child{color:#3f4756}.concept-figure{background:#f6f7fa;break-inside:avoid}}
+</style></head>
 <body>
-<header class="topbar"><nav class="nav wrap" aria-label="Main navigation">
-<a class="brand" href="#home" aria-label="Aarush home"><span class="mark">A.</span><span>AARUSH<span style="color:var(--lime)">.</span></span></a>
-<div class="links" id="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#beyond">Beyond academics</a></div>
-<a class="navcta" href="#connect">Let's connect ↗</a><button class="menuButton" id="menubtn" aria-expanded="false" aria-controls="navlinks">Menu</button>
-</nav></header>
-<main>
-<section class="hero wrap" id="home">
-<div><div class="eyebrow"><span class="dot"></span> Student · Builder · Learner</div><h1>Curious about<br>how things work.<br><span class="outline">Learning by building.</span></h1><p class="lead">Hey, I'm Aarush — a Class 11 PCM student exploring computer science, artificial intelligence and problem-solving, one experiment at a time.</p><div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↘</span></a><a class="btn" href="#achievements">View achievements</a></div><div class="micro">CLASS 11 · PCM · INDIA &nbsp; / &nbsp; ALWAYS LEARNING</div></div>
-<div class="visual" aria-label="Animated geometric A monogram"><div class="orb"></div><div class="orbletter">A</div><div class="floatcard fc1"><strong>Curiosity mode: ON</strong><span>Exploring ideas through code</span></div><div class="floatcard fc2"><strong>Currently learning</strong><span>Python · AI · Problem solving</span></div><div class="floatcard fc3"><strong>Build small. Learn deeply.</strong><span>Progress over perfection</span></div></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div aria-hidden="true" class="scroll-progress"><span></span></div>
+<div aria-hidden="true" class="ambient-glow"></div>
+<header class="site-header">
+<nav aria-label="Main navigation" class="nav wrap">
+<a aria-label="Aarush home" class="brand" href="#top"><span class="brand-mark">A.</span><span>AARUSH<span class="brand-dot">.</span></span></a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" class="menu-toggle">☰</button>
+<div class="nav-links" id="nav-links">
+<a href="#about-details">About</a>
+<a href="#project-case-study">Projects</a>
+<a href="#achievements">Achievements</a>
+<a href="#beyond">Beyond academics</a>
+<button aria-haspopup="dialog" class="nav-cta palette-trigger" type="button">Quick jump <kbd>⌘ K</kbd></button>
+<button aria-label="Switch to light theme" aria-pressed="false" class="theme-toggle" id="theme-toggle" type="button"><span aria-hidden="true" class="theme-toggle-icon">☼</span><span class="theme-toggle-text">Light mode</span></button>
+<a href="#contact-profiles">Connect</a></div>
+</nav>
+</header>
+<main id="main">
+<section class="hero wrap" id="top">
+<div class="hero-copy">
+<p class="eyebrow"><span class="live-dot"></span> CLASS 11 · INDIA · CURIOUS BY DEFAULT</p>
+<h1>Curious about how things work.<br/><span class="gradient-text">Learning by building.</span></h1>
+<p class="hero-intro">I'm Aarush, a Class 11 PCM student interested in computer science, AI, and problem-solving. This site brings together projects I'm exploring, academic milestones, and the things I learn through basketball and teamwork.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+<a class="button button-secondary" href="#achievements">View achievements <span aria-hidden="true">↘</span></a>
+</div>
+<div class="hero-note"><span class="note-line"></span><span>Currently balancing PCM, JEE preparation, and side projects.</span></div>
+</div>
+<div aria-label="A custom animated visual about learning, experimenting, and improving" class="hero-visual">
+<canvas aria-hidden="true" class="particle-canvas"></canvas>
+<div aria-hidden="true" class="specimen-orbit specimen-orbit-a"></div>
+<div aria-hidden="true" class="specimen-orbit specimen-orbit-b"></div>
+<div class="specimen-panel">
+<div class="specimen-top"><span class="specimen-index">FIELD NOTE / 001</span><span class="specimen-live"><i></i> LEARNING MODE</span></div>
+<div aria-hidden="true" class="specimen-art">
+<svg aria-label="Geometric A monogram formed from luminous lines" class="specimen-svg" role="img" viewbox="0 0 320 250">
+<defs><lineargradient id="aStroke" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#d8ff7f"></stop><stop offset=".48" stop-color="#a99cff"></stop><stop offset="1" stop-color="#74d9ff"></stop></lineargradient><filter id="aGlow"><fegaussianblur result="blur" stddeviation="5"></fegaussianblur><femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
+<g stroke="#8491b6" stroke-opacity=".17" stroke-width="1"><path d="M15 35H305M15 75H305M15 115H305M15 155H305M15 195H305M40 15V235M80 15V235M120 15V235M160 15V235M200 15V235M240 15V235M280 15V235"></path></g>
+<path d="M77 205 145 42h26l73 163h-36l-18-45h-63l-17 45Z" fill="rgba(155,140,255,.08)" filter="url(#aGlow)" stroke="url(#aStroke)" stroke-linejoin="round" stroke-width="3.2"></path>
+<path d="M138 132h48M126 160h73" fill="none" stroke="#d8ff7f" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="158" cy="42" fill="#d8ff7f" r="5"></circle><circle cx="77" cy="205" fill="#74d9ff" r="4"></circle><circle cx="244" cy="205" fill="#a99cff" r="4"></circle>
+<path d="M158 42 224 83M77 205 39 190M244 205 282 187" fill="none" stroke="#a99cff" stroke-dasharray="3 5" stroke-opacity=".72"></path>
+</svg>
+<span class="specimen-coordinate coordinate-a">28° / 01</span><span class="specimen-coordinate coordinate-b">BUILD → TEST</span>
+</div>
+<div class="specimen-bottom"><div><span class="specimen-label">CURRENT CURIOSITY</span><strong>Computer science &amp; problem-solving</strong></div><span class="specimen-mark">A<span>.</span></span></div>
+</div>
+<div class="specimen-float specimen-float-top"><span class="specimen-float-icon">{ }</span><div><small>EXPERIMENTING WITH</small><strong>Python / voice workflows</strong></div><span class="float-signal"></span></div>
+<div class="specimen-float specimen-float-bottom"><span class="specimen-float-icon specimen-icon-lime">↗</span><div><small>OUTSIDE THE CODE</small><strong>Teamwork · Basketball</strong></div></div>
+<div class="visual-caption">LEARN SOMETHING. TEST IT. REPEAT.</div>
+</div>
+<div class="hero-bottomline"><span>01 / ABOUT THE BUILDER</span><span>SCROLL TO EXPLORE ↓</span></div>
 </section>
-<section class="section" id="about"><div class="wrap"><div class="sectionhead"><div><div class="kicker">01 / A little about me</div><h2>Learning isn't just<br>about the result.</h2></div><p class="sectionintro">I'm interested in how technology works beneath the surface — and I like turning that curiosity into small experiments.</p></div><div class="aboutgrid"><p class="abouttext">I enjoy the mix of logic and creativity: understanding a concept, testing an idea, finding what breaks, and improving it. Alongside science and maths, basketball has taught me to communicate, keep showing up, and contribute to a team. This site is a snapshot of what I've explored so far — and what I'm learning next.</p><div class="principles"><div class="principle"><span class="check">✳</span><div><b>Build small</b><span>Turn a big idea into a manageable first version.</span></div></div><div class="principle"><span class="check">⌁</span><div><b>Test honestly</b><span>Keep unfinished features clearly labelled.</span></div></div><div class="principle"><span class="check">↗</span><div><b>Keep learning</b><span>Track progress, questions and what comes next.</span></div></div></div></div></div></section>
-<section class="section" id="projects"><div class="wrap"><div class="sectionhead"><div><div class="kicker">02 / Selected work</div><h2>Ideas in progress.</h2></div><p class="sectionintro">I use projects to learn how different pieces of software fit together. Here is the main experiment I am documenting right now.</p></div><div class="feature"><div class="featureintro"><div><div class="big">J.</div><span class="tag">WORK IN PROGRESS</span><h3>Jarvis AI</h3><p>A personal-assistant experiment exploring voice interaction and desktop workflows with Python.</p></div><div class="tagrow"><span class="tag">Python</span><span class="tag">Voice UI</span><span class="tag">Automation concepts</span></div></div><div><div class="tabs" role="tablist" aria-label="Jarvis project details"><button class="tab" role="tab" data-tab="overview" aria-selected="true">Overview</button><button class="tab" role="tab" data-tab="learning" aria-selected="false">Learning log</button><button class="tab" role="tab" data-tab="next" aria-selected="false">Next steps</button></div><div class="featuredetails"><div class="detail tabcontent" data-panel="overview"><div class="detailtop"><h3>What I'm exploring</h3><small>01 / CONCEPT</small></div><p>How a voice-driven assistant might connect input, intent handling, application actions and spoken responses. The diagram in my notes is a learning model, not a claim that every feature is implemented.</p></div><div class="detail tabcontent hidden" data-panel="learning"><div class="detailtop"><h3>What I'm learning</h3><small>02 / PROCESS</small></div><p>Breaking the assistant into smaller parts, understanding Python modules, testing one feature at a time, and keeping track of errors instead of hiding them.</p></div><div class="detail tabcontent hidden" data-panel="next"><div class="detailtop"><h3>Next steps</h3><small>03 / ROADMAP</small></div><p>Make the basic voice loop reliable, document what works, test desktop actions carefully, and add a feature only after its behaviour is understood.</p></div><div class="detail"><div class="detailtop"><h3>Current status</h3><small>EARLY STAGE</small></div><p>This is an evolving personal project. Meeting participation, message reading, voice authentication and other advanced ideas are not presented as finished features.</p></div></div></div></div><div class="grid three" style="margin-top:16px"><article class="card"><div class="cardnum">01 — METHOD</div><h3>Prototype first</h3><p>Start with a small behaviour that can be tested and improved.</p></article><article class="card"><div class="cardnum">02 — DEBUG</div><h3>Learn from errors</h3><p>Understand what failed before adding another layer.</p></article><article class="card"><div class="cardnum">03 — DOCUMENT</div><h3>Show the real progress</h3><p>Record lessons and limitations so the project stays honest.</p></article></div></div></section>
-<section class="section" id="achievements"><div class="wrap"><div class="sectionhead"><div><div class="kicker">03 / Milestones</div><h2>Things I'm proud of.</h2></div><p class="sectionintro">A few milestones from academics, STEM activities and sports that reflect the effort I've put in so far.</p></div><div class="tabs" role="tablist" aria-label="Filter achievements"><button class="tab filter" data-filter="all" aria-selected="true">All milestones</button><button class="tab filter" data-filter="academic" aria-selected="false">Academic</button><button class="tab filter" data-filter="stem" aria-selected="false">STEM</button><button class="tab filter" data-filter="sports" aria-selected="false">Basketball</button></div><div class="grid results">
-<article class="result highlight achievement" data-kind="academic"><div class="label">CBSE · Class 10</div><div class="value">100/100</div><div class="sub">Artificial Intelligence</div></article>
-<article class="result achievement" data-kind="academic"><div class="label">French Olympiad · Class 9</div><div class="value">92%</div><div class="sub">Global Rank 26</div></article>
-<article class="result achievement" data-kind="academic"><div class="label">French Olympiad · Class 10</div><div class="value">96%</div><div class="sub">Global Rank 50</div></article>
-<article class="result achievement" data-kind="sports"><div class="label">Sports-a-thon</div><div class="value">Gold</div><div class="sub">Team captain · Sushant Estate</div></article>
-</div><div class="grid three" style="margin-top:16px">
-<article class="card achievement" data-kind="stem"><div class="cardnum">STEM / BEEHES</div><h3>Advanced to South Delhi round</h3><p>Participated in BEEHES and progressed to the South Delhi round.</p></article>
-<article class="card achievement" data-kind="sports"><div class="cardnum">BASKETBALL</div><h3>Teamwork under pressure</h3><p>Represented school in interschool basketball competitions and participated in SGFI basketball competitions.</p></article>
-<article class="card achievement" data-kind="sports"><div class="cardnum">LEADERSHIP</div><h3>Captain on court</h3><p>Helped motivate teammates during the society Sports-a-thon gold-medal win.</p></article>
-</div></div></section>
-<section class="section" id="beyond"><div class="wrap"><div class="sectionhead"><div><div class="kicker">04 / Beyond academics</div><h2>More than a report card.</h2></div><p class="sectionintro">Some of the activities that shape how I think, collaborate and keep learning outside class.</p></div><div class="timeline"><article class="mile"><div class="num">01 / TEAMWORK</div><h3>Basketball</h3><p>Learning to communicate, adjust in the moment, and support a team under pressure.</p></article><article class="mile"><div class="num">02 / COMMUNICATION</div><h3>Public speaking</h3><p>A skill I'm continuing to develop: organising thoughts, speaking clearly, and building confidence.</p></article><article class="mile"><div class="num">03 / CURIOSITY</div><h3>Building with technology</h3><p>Exploring code and AI through hands-on experiments, debugging, and reflection.</p></article></div></div></section>
-<section class="section" id="connect"><div class="wrap"><div class="contactbox"><div><div class="kicker">05 / Say hello</div><h2>Curiosity grows<br>when we share.</h2><p>I'm documenting what I learn and the projects I build. You can find my GitHub profile below; more project links will be added as they're ready.</p><div class="actions"><a class="btn primary" href="https://github.com/aarushsh201-lang" target="_blank" rel="noopener">GitHub profile ↗</a><button class="btn" id="copylink">Copy website link</button></div></div><div class="tagrow"><span class="tag">Computer science</span><span class="tag">AI</span><span class="tag">Basketball</span><span class="tag">Learning by building</span></div></div><footer class="foot"><span>© <span id="year">2026</span> Aarush Sharma · Built with curiosity.</span><span><a href="#home" class="textlink">Back to top ↑</a></span></footer></div></section>
-</main><button id="topbtn" aria-label="Back to top">↑ Top</button>
+<div aria-label="Areas of focus" class="signal-strip wrap"><span class="signal-intro">CURRENT SIGNAL</span><span>PCM <b>✳</b> JEE</span><span>COMPUTER SCIENCE <b>✳</b></span><span>PYTHON EXPERIMENTS <b>✳</b></span><span>BASKETBALL <b>✳</b></span><span>ALWAYS LEARNING</span></div>
+<section class="section wrap" id="about">
+<div class="section-heading">
+<p class="eyebrow">01 — ABOUT</p>
+<h2>Part student.<br/><span class="muted-heading">Part problem-solver.</span></h2>
+</div>
+<div class="about-grid">
+<div class="about-copy">
+<p class="large-copy">I'm currently a Class 11 student studying Physics, Chemistry, and Mathematics. I'm preparing for competitive engineering exams while exploring computer science through projects of my own.</p>
+<p>I like working through difficult problems, figuring out why code behaves a certain way, and contributing to a team. I'm still learning, so this site is a record of progress—not a claim to have everything figured out.</p>
+</div>
+<div class="principles-card">
+<p class="card-label">WHAT I'M TRYING TO PRACTISE</p>
+<div class="principle"><span class="principle-num">01</span><div><strong>Learn deeply</strong><small>Understand the why, not just the answer.</small></div></div>
+<div class="principle"><span class="principle-num">02</span><div><strong>Build, then improve</strong><small>Turn ideas into working experiments.</small></div></div>
+<div class="principle"><span class="principle-num">03</span><div><strong>Be useful to others</strong><small>Look for real problems worth solving.</small></div></div>
+</div>
+</div>
+</section><div id="about-details"><section class="page-section section-tinted"><div class="wrap"><div class="section-heading"><p class="eyebrow">01 — HOW I LIKE TO LEARN</p><h2>Curiosity is useful<br/><span class="muted-heading">when it becomes practice.</span></h2></div><div class="about-principles"><article class="about-principle"><p class="eyebrow">01 / UNDERSTAND</p><h3>Learn the why</h3><p>I try to understand the reasoning behind a solution, not only remember the final answer.</p></article><article class="about-principle"><p class="eyebrow">02 / BUILD</p><h3>Make small things</h3><p>Personal projects help me turn curiosity into practical experiments and reveal what I still need to learn.</p></article><article class="about-principle"><p class="eyebrow">03 / IMPROVE</p><h3>Be honest about progress</h3><p>I’d rather show an early project and explain its limits than present a plan as a finished result.</p></article></div></div></section><section class="page-section wrap"><div class="section-heading"><p class="eyebrow">02 — CURRENT FOCUS</p><h2>What I’m working<br/><span class="muted-heading">towards.</span></h2></div><div class="content-grid"><article class="detail-panel"><p class="eyebrow">ACADEMICS</p><h2>Build strong fundamentals</h2><p>My main academic focus is PCM and preparation for engineering entrance exams. I’m trying to get more consistent with problem-solving and revise concepts deeply.</p></article><article class="detail-panel"><p class="eyebrow">COMPUTER SCIENCE</p><h2>Learn by experimenting</h2><p>I’m exploring Python and the building blocks behind voice interaction and desktop workflows through my Jarvis AI project.</p><p><a href="#project-case-study">Read the project case study ↗</a></p></article></div></section></div>
+<section class="section section-tinted" id="projects">
+<div class="wrap">
+<div class="section-heading heading-row">
+<div><p class="eyebrow">02 — PROJECTS</p><h2>Things I've been<br/><span class="muted-heading">working on.</span></h2></div>
+<p class="heading-aside">One personal project for now, kept deliberately simple. I want to show the learning process honestly instead of making an unfinished build look bigger than it is.</p>
+</div>
+<article class="project-card featured-project project-compact">
+<div class="project-topline"><span class="project-number">PROJECT 001</span><span class="status status-progress"><span></span> IN PROGRESS</span></div>
+<div class="project-content">
+<div class="project-info">
+<p class="project-type">PYTHON · PERSONAL LEARNING PROJECT</p>
+<h3>Jarvis AI</h3>
+<p>A personal assistant experiment where I'm learning about voice interaction and desktop workflows. I'm developing it step by step and checking that each feature works before presenting it as complete.</p>
+<div class="tag-row"><span>Python</span><span>Voice interaction</span><span>Debugging</span></div>
+<p class="honesty-note"><span>↳</span> Early-stage project. This page will grow as I have tested features and useful lessons to share.</p>
+</div>
+<aside aria-label="Jarvis AI project explorer" class="project-explorer">
+<div class="explorer-window-top"><span class="explorer-dots"><i></i><i></i><i></i></span><span>JARVIS / FIELD NOTES</span><span class="explorer-window-number">001</span></div>
+<div aria-label="Project information" class="explorer-tabs" role="tablist">
+<button aria-controls="panel-overview" aria-selected="true" class="explorer-tab is-active" data-panel="overview" id="tab-overview" role="tab" type="button">Overview</button>
+<button aria-controls="panel-learning" aria-selected="false" class="explorer-tab" data-panel="learning" id="tab-learning" role="tab" tabindex="-1" type="button">Learning log</button>
+<button aria-controls="panel-next" aria-selected="false" class="explorer-tab" data-panel="next" id="tab-next" role="tab" tabindex="-1" type="button">Next steps</button>
+</div>
+<div aria-labelledby="tab-overview" class="explorer-panel is-active" id="panel-overview" role="tabpanel"><p class="explorer-kicker">WHAT IT IS</p><h4>A personal assistant experiment.</h4><p>Exploring voice interaction and desktop workflows in Python. Features are treated as experiments until they are tested.</p><div class="explorer-progress"><span>PROJECT STAGE</span><strong>EARLY BUILD</strong><div><i></i></div></div></div>
+<div aria-labelledby="tab-learning" class="explorer-panel" hidden="" id="panel-learning" role="tabpanel"><p class="explorer-kicker">WHAT I'M LEARNING</p><h4>Understand each moving part.</h4><ul><li>Break a feature into smaller pieces.</li><li>Debug behaviour instead of guessing.</li><li>Keep notes on fixes and limitations.</li></ul><p class="explorer-disclaimer">A learning log, not a claim that every planned feature works.</p></div>
+<div aria-labelledby="tab-next" class="explorer-panel" hidden="" id="panel-next" role="tabpanel"><p class="explorer-kicker">NEXT ITERATION</p><h4>Make the basics reliable.</h4><ul><li>Keep the core interaction small and testable.</li><li>Verify features one at a time.</li><li>Add a demo only when it shows real working behaviour.</li></ul></div>
+<div class="explorer-footer"><span><i></i> LOCAL PROJECT NOTES</span><span>PYTHON · EXPERIMENTAL</span></div>
+</aside>
+</div>
+<div class="project-footer"><span>PERSONAL BUILD</span><span>SMALL STEPS · REAL PROGRESS</span></div>
+</article><div class="case-study-link-row"><p>See the motivation, current scope, learning notes, and next steps behind this early-stage build.</p><a class="button button-secondary" href="#project-case-study">Read the project case study <span aria-hidden="true">↗</span></a></div>
+<div aria-label="Project principles" class="project-practice-row">
+<div><span>01</span><strong>Build small</strong><p>Start with a manageable feature.</p></div>
+<div><span>02</span><strong>Test honestly</strong><p>Separate working features from ideas.</p></div>
+<div><span>03</span><strong>Keep learning</strong><p>Write down bugs, fixes, and lessons.</p></div>
+</div>
+</div>
+</section><div id="project-case-study"><section class="page-hero wrap" id="project-case-study-hero">
+<div class="breadcrumb"><a href="#top">HOME</a><span>/</span><a href="#projects">PROJECTS</a><span>/</span><span>001</span></div>
+<p class="eyebrow">PROJECT 001 / CASE STUDY</p>
+<h1>Jarvis AI.<br/><span class="muted-heading">A personal assistant experiment.</span></h1>
+<p class="page-lead">A learning project where I’m exploring how Python, voice interaction, and desktop workflows can fit together. I’m documenting the process honestly while I build and test the fundamentals.</p>
+<div class="page-meta"><span class="meta-pill">PYTHON</span><span class="meta-pill">PERSONAL PROJECT</span><span class="meta-pill">EARLY STAGE · IN PROGRESS</span></div>
+<div class="button-row"><a class="button button-primary" href="#project-approach">Explore the build notes <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#contact-profiles">Connect <span aria-hidden="true">↗</span></a></div>
+<figure aria-labelledby="concept-caption" class="concept-figure">
+<div class="concept-top"><span>CONCEPTUAL SYSTEM MAP</span><span>NOT A LIVE DEMO</span></div>
+<div class="concept-flow">
+<div class="flow-node"><span aria-hidden="true" class="flow-icon">◉</span><strong>Voice input</strong><span>INPUT · EXPERIMENT</span></div>
+<div aria-hidden="true" class="flow-arrow">→</div>
+<div class="flow-node"><span aria-hidden="true" class="flow-icon">{ }</span><strong>Python logic</strong><span>PROCESS · LEARN</span></div>
+<div aria-hidden="true" class="flow-arrow">→</div>
+<div class="flow-node"><span aria-hidden="true" class="flow-icon">↗</span><strong>Response / action</strong><span>OUTPUT · VERIFY</span></div>
+</div>
+<figcaption class="figure-note" id="concept-caption">This is an explanatory diagram of the idea, not a screenshot of a finished application or a claim that every step currently works.</figcaption>
+</figure>
+</section><section class="page-section wrap" id="project-approach">
+<div class="section-heading"><p class="eyebrow">01 — THE IDEA</p><h2>Build a small piece.<br/><span class="muted-heading">Understand it properly.</span></h2></div>
+<div class="content-grid">
+<article class="detail-panel"><p class="eyebrow">MOTIVATION</p><h2>Why I’m building it</h2><p>I wanted to experiment with a personal assistant that can interact through voice and potentially help with selected desktop workflows. That’s a broad idea, so the sensible path is to break it down into small parts and learn how each part behaves before combining them.</p><p>The goal of this page is to show what I’m exploring, what I still need to verify, and how the project develops—not to market it as a finished product.</p></article>
+<aside class="status-panel"><span class="status-label">CURRENT STAGE</span><h2>Early build</h2><div class="fact-row"><span>Project type</span><strong>Personal learning project</strong></div><div class="fact-row"><span>Primary language</span><strong>Python</strong></div><div class="fact-row"><span>Public demo</span><strong>Not published yet</strong></div><div class="fact-row"><span>Feature claims</span><strong>Verify before listing</strong></div></aside>
+</div>
+</section><section class="page-section section-tinted" id="learning-areas"><div class="wrap">
+<div class="section-heading"><div><p class="eyebrow">02 — WHAT I’M EXPLORING</p><h2>The work behind<br/><span class="muted-heading">the idea.</span></h2></div><p class="heading-aside">These are areas of learning, not a list of fully completed capabilities.</p></div>
+<div class="three-grid">
+<article class="learn-card"><span class="mini-number">01 / INPUT</span><h3>Voice interaction</h3><p>Understand how spoken input is captured, interpreted, and turned into a useful next step.</p></article>
+<article class="learn-card"><span class="mini-number">02 / LOGIC</span><h3>Small Python components</h3><p>Keep responsibilities clear, make behaviour easier to test, and understand how components pass information.</p></article>
+<article class="learn-card"><span class="mini-number">03 / OUTPUT</span><h3>Desktop workflows</h3><p>Explore limited workflows carefully, with attention to reliability, permissions, and what should happen when something fails.</p></article>
+</div>
+<div class="honesty-banner"><strong>Honest status:</strong> I’m not claiming voice wake-up, messaging, meeting attendance, camera recognition, or other planned features as finished. I’ll add a working demo only after I can reproduce the feature reliably.</div>
+</div></section><section class="page-section wrap" id="development-process"><div class="section-heading"><p class="eyebrow">03 — HOW I APPROACH IT</p><h2>From idea to<br/><span class="muted-heading">something testable.</span></h2></div>
+<div class="timeline-list">
+<article class="timeline-item"><h3>Choose one small feature</h3><p>Keep the next change narrow enough to understand instead of trying to build everything at once.</p></article>
+<article class="timeline-item"><h3>Test what actually happens</h3><p>Reproduce the behaviour, check edge cases, and debug the problem rather than assuming it works.</p></article>
+<article class="timeline-item"><h3>Record the result</h3><p>Write down what worked, what failed, and what needs another attempt before calling a feature done.</p></article>
+</div>
+</section><section class="page-section section-tinted" id="next-steps"><div class="wrap"><div class="section-heading"><p class="eyebrow">04 — NEXT STEPS</p><h2>Make the foundation<br/><span class="muted-heading">more reliable.</span></h2></div>
+<div class="three-grid"><article class="roadmap-card"><span class="roadmap-num">NEXT 01</span><h3>Stabilize the core</h3><p>Focus on one basic input-to-response path and understand its dependencies.</p></article><article class="roadmap-card"><span class="roadmap-num">NEXT 02</span><h3>Track bugs and fixes</h3><p>Keep short notes so I can explain the reason behind a fix, not just that it worked once.</p></article><article class="roadmap-card"><span class="roadmap-num">NEXT 03</span><h3>Publish evidence</h3><p>Add a repository, screenshots, or a demonstration only when they show real project behaviour.</p></article></div>
+<div class="page-cta-row"><a class="button button-primary" data-config-href="jarvisRepo" hidden="" href="#">View source repository ↗</a><a class="button button-secondary" data-config-href="jarvisDemo" hidden="" href="#">Open working demo ↗</a><a class="button button-secondary" href="#achievements">View achievements ↗</a></div>
+<p class="small-note">Repository and demo links appear only after a real URL is added to <code>site-config.js</code>.</p>
+</div></section></div>
+<section class="section wrap" id="achievements">
+<div class="section-heading milestone-heading"><div><p class="eyebrow">03 — MILESTONES</p><h2>Progress worth<br/><span class="muted-heading">keeping track of.</span></h2></div><p class="filter-hint">A few real milestones. Filter to explore.</p></div>
+<div aria-label="Filter achievements" class="achievement-filters" role="group">
+<button aria-pressed="true" class="achievement-filter is-active" data-filter="all" type="button">All <span>06</span></button>
+<button aria-pressed="false" class="achievement-filter" data-filter="academic" type="button">Academic <span>02</span></button>
+<button aria-pressed="false" class="achievement-filter" data-filter="stem" type="button">STEM <span>01</span></button>
+<button aria-pressed="false" class="achievement-filter" data-filter="sport" type="button">Basketball <span>03</span></button>
+</div>
+<div class="milestone-grid">
+<article class="milestone" data-category="academic"><div class="milestone-icon">AI</div><p class="milestone-category">ACADEMICS</p><h3>100/100 in Artificial Intelligence</h3><p>Scored full marks in Artificial Intelligence in the Class 10 CBSE examination.</p><span class="milestone-foot">CLASS 10 · CBSE</span></article>
+<article class="milestone milestone-french" data-category="academic"><div class="milestone-icon">FR</div><p class="milestone-category">FRENCH OLYMPIAD</p><h3>Global rankings across two classes</h3><p class="french-intro">French Olympiad conducted by <strong>Prayatna Educational Society</strong>.</p><div class="french-rank-grid"><div class="french-rank-card french-rank-nine"><span class="french-class">CLASS 9</span><strong class="french-score">92%</strong><span class="french-rank-caption">GLOBAL RANK</span><span class="french-rank-number">26</span></div><div class="french-rank-card french-rank-ten"><span class="french-class">CLASS 10</span><strong class="french-score">96%</strong><span class="french-rank-caption">GLOBAL RANK</span><span class="french-rank-number">50</span></div></div><span class="milestone-foot french-foot">RECOGNITION IN BOTH CLASSES</span></article>
+<article class="milestone" data-category="stem"><div class="milestone-icon">ST</div><p class="milestone-category">STEM</p><h3>BEEHES</h3><p>Participated in BEEHES and advanced to the South Delhi round.</p><span class="milestone-foot">SOUTH DELHI ROUND</span></article>
+<article class="milestone" data-category="sport"><div class="milestone-icon">BB</div><p class="milestone-category">SCHOOL BASKETBALL</p><h3>Interschool competitions</h3><p>Represented my school in interschool basketball competitions, gaining experience in competitive team play.</p><span class="milestone-foot">SCHOOL REPRESENTATION</span></article>
+<article class="milestone" data-category="sport"><div class="milestone-icon">SG</div><p class="milestone-category">COMPETITIVE SPORT</p><h3>SGFI basketball</h3><p>Participated in SGFI basketball competitions and continued developing my game in a competitive setting.</p><span class="milestone-foot">BASKETBALL PARTICIPATION</span></article>
+<article class="milestone milestone-sport" data-category="sport"><div class="milestone-icon">GOLD</div><p class="milestone-category">TEAMWORK &amp; LEADERSHIP</p><h3>Sports-a-thon gold medal</h3><p>Captained my society basketball team at Sushant Estate’s Sports-a-thon, helped keep teammates motivated, and contributed to our gold-medal finish.</p><span class="milestone-foot">SUSHANT ESTATE · SPORTS-A-THON</span></article>
+</div>
+<p class="footnote">Achievements and participation are described as accurately as possible; official certificates and result links can be added when available.</p><p class="page-footer-links"><a href="#achievements">Explore the full achievements page ↗</a></p>
+</section>
+<section class="section section-tinted" id="beyond">
+<div class="wrap">
+<div class="section-heading heading-row">
+<div><p class="eyebrow">04 — BEYOND ACADEMICS</p><h2>What I learn<br/><span class="muted-heading">outside the classroom.</span></h2></div>
+<p class="heading-aside">Teamwork, communication, and curiosity shape how I learn and contribute beyond academics.</p>
+</div>
+<div class="beyond-cards-grid">
+<article class="sports-card beyond-card">
+<div class="sports-head"><span class="basketball-mark">◎</span><span class="sport-kicker">SPORT · TEAMWORK · LEADERSHIP</span></div>
+<div aria-hidden="true" class="court-graphic"><svg viewbox="0 0 540 150"><rect fill="none" height="148" rx="7" stroke="currentColor" stroke-opacity=".25" width="538" x="1" y="1"></rect><path d="M270 1V149M1 75H539M60 1V149M480 1V149M60 38H130V112H60M480 38H410V112H480" fill="none" stroke="currentColor" stroke-opacity=".3"></path><circle cx="270" cy="75" fill="none" r="31" stroke="currentColor" stroke-opacity=".4"></circle><circle cx="95" cy="75" fill="none" r="18" stroke="currentColor" stroke-opacity=".4"></circle><circle cx="445" cy="75" fill="none" r="18" stroke="currentColor" stroke-opacity=".4"></circle><path d="M270 75 335 43 365 76 407 57" fill="none" stroke="#d8ff7f" stroke-dasharray="4 6" stroke-linecap="round" stroke-width="2"></path><circle cx="270" cy="75" fill="#d8ff7f" r="4"></circle><circle cx="407" cy="57" fill="#74d9ff" r="4"></circle></svg><span>READ THE FLOOR. TRUST THE TEAM.</span></div>
+<h3>Basketball</h3>
+<p>I have represented my school in interschool basketball competitions and participated in SGFI basketball competitions. The game has taught me to communicate under pressure, make quick decisions, and keep working with my team.</p>
+<p>At Sushant Estate’s Sports-a-thon, I served as team captain, encouraged my teammates, and contributed to our basketball team’s gold-medal win.</p>
+<div class="sports-highlight"><div><strong>Gold medal</strong><span>Sushant Estate Sports-a-thon</span></div><div><strong>School team</strong><span>Interschool competitions</span></div></div>
+<p class="sports-small">Team contribution · Captaincy · Competitive basketball</p>
+</article>
+<article class="sports-card beyond-card beyond-card-speaking">
+<div class="sports-head"><span class="basketball-mark">↗</span><span class="sport-kicker">COMMUNICATION · EXPRESSION</span></div>
+<h3>Public Speaking</h3>
+<p>I’m developing my ability to communicate ideas clearly, organize a message, and speak with confidence in front of an audience. I see public speaking as a skill built through preparation, practice, and learning from each experience.</p>
+<div class="beyond-points"><span>Clear communication</span><span>Structured thinking</span><span>Confidence through practice</span></div>
+<p class="sports-small">Communication · Preparation · Continuous improvement</p>
+</article>
+<article class="sports-card beyond-card beyond-card-beehes">
+<div class="sports-head"><span class="basketball-mark">BH</span><span class="sport-kicker">COMPETITION · PERSONAL GROWTH</span></div>
+<h3>BEEHES</h3>
+<p>I participated in BEEHES and advanced to the South Delhi round. It was an opportunity to challenge myself, take part in a competitive setting, and continue developing beyond the classroom.</p>
+<div class="sports-highlight"><div><strong>South Delhi</strong><span>Round reached</span></div><div><strong>BEEHES</strong><span>Participation</span></div></div>
+<p class="sports-small">Participation · Initiative · Growth beyond academics</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section wrap" id="now">
+<div class="now-card">
+<div><p class="eyebrow">05 — CURRENTLY</p><h2>What I'm focused on<br/><span class="muted-heading">right now.</span></h2></div>
+<div class="now-list">
+<div class="now-item"><span class="now-dot dot-violet"></span><div><strong>PCM &amp; JEE preparation</strong><p>Building fundamentals and getting more consistent with problem-solving.</p></div><span class="now-tag">ONGOING</span></div>
+<div class="now-item"><span class="now-dot dot-blue"></span><div><strong>Computer science</strong><p>Learning by building and debugging small systems, starting with Jarvis AI.</p></div><span class="now-tag">LEARNING</span></div>
+<div class="now-item"><span class="now-dot dot-orange"></span><div><strong>Writing things down</strong><p>Keeping notes on what I try, what works, and what I still need to learn.</p></div><span class="now-tag">IN PROGRESS</span></div>
+</div>
+</div>
+</section>
+<section class="contact-section" id="contact">
+<div class="wrap contact-inner">
+<p class="eyebrow">06 — SAY HELLO</p>
+<h2>Good things start<br/>with a <span class="gradient-text">conversation.</span></h2>
+<p>Interested in technology, student projects, STEM, or basketball? I'd be glad to connect.</p>
+<div class="contact-actions portfolio-actions">
+<button class="button button-primary" id="print-portfolio" type="button">Save as PDF <span aria-hidden="true">↗</span></button>
+<button class="button button-secondary" id="share-portfolio" type="button">Share portfolio <span aria-hidden="true">↗</span></button>
+</div>
+<p aria-live="polite" class="contact-action-status" id="portfolio-action-status" role="status"></p>
+<p class="contact-edit-note">A public share link works after this page is hosted online. The PDF option uses your browser’s print dialog so you can save a copy.</p>
+<div class="social-grid" data-socials-wrapper="" hidden="">
+<a class="social-card" data-config-href="linkedin" hidden="" href="#"><span class="social-symbol">in /</span><strong>LinkedIn</strong><span>Connect professionally ↗</span></a>
+<a class="social-card" data-config-href="github" hidden="" href="#"><span class="social-symbol">{ }</span><strong>GitHub</strong><span>Explore my code ↗</span></a>
+<a class="social-card" data-config-email="" hidden="" href="#"><span class="social-symbol">@ /</span><strong>Email</strong><span>Send a message ↗</span></a>
+</div><p class="empty-config-note" data-empty-config-note="">Before publishing, add any real profile or contact links you want to share in <code>site-config.js</code>. Empty links stay hidden.</p></div>
+</section><div id="contact-profiles"><section class="page-section section-tinted"><div class="wrap"><div class="section-heading"><p class="eyebrow">01 — PUBLIC PROFILES</p><h2>Find me on<br/><span class="muted-heading">the right channels.</span></h2></div><div class="social-grid" data-socials-wrapper="">
+<a class="social-card" data-config-href="linkedin" hidden="" href="#"><span class="social-symbol">in /</span><strong>LinkedIn</strong><span>Connect professionally ↗</span></a>
+<a class="social-card" data-config-href="github" hidden="" href="#"><span class="social-symbol">{ }</span><strong>GitHub</strong><span>Browse projects and code ↗</span></a>
+<a class="social-card" data-config-email="" hidden="" href="#"><span class="social-symbol">@ /</span><strong>Email</strong><span>Send a message ↗</span></a>
+</div><p class="empty-config-note" data-empty-config-note="">Before publishing, open <code>site-config.js</code> and add only the real profile links and email you want public. Any fields left blank stay hidden automatically.</p><div class="content-grid" style="margin-top:28px"><article class="detail-panel"><p class="eyebrow">PROJECTS</p><h2>Interested in what I’m building?</h2><p>The Jarvis AI page describes the idea, the current learning areas, and the next steps without claiming that unfinished features are complete.</p><p><a href="#project-case-study">Read the Jarvis case study ↗</a></p></article><article class="detail-panel"><p class="eyebrow">PORTFOLIO</p><h2>Keep exploring</h2><p>This site is a work in progress. As I gain experience, I’ll add tested project demos, source links, and more evidence of what I learn.</p><p><a href="#achievements">View milestones ↗</a></p></article></div></div></section></div>
+</main>
+<div class="palette-backdrop" hidden="" id="palette-backdrop">
+<section aria-describedby="palette-desc" aria-labelledby="palette-title" aria-modal="true" class="command-palette" id="command-palette" role="dialog">
+<div class="palette-top"><span class="palette-symbol">⌘</span><div><p id="palette-title">Quick jump</p><small id="palette-desc">Go straight to a part of this portfolio.</small></div><button aria-label="Close quick jump" class="palette-close" type="button">ESC</button></div>
+<label class="palette-search-label" for="palette-search">SEARCH SECTIONS</label><input autocomplete="off" class="palette-search" id="palette-search" placeholder="Try “basketball” or “projects”…" type="search"/>
+<nav aria-label="Portfolio sections" class="palette-results">
+<a data-search="home start introduction" href="#top"><span class="palette-result-icon">↗</span><span><strong>Home</strong><small>Intro and current interests</small></span><kbd>01</kbd></a>
+<a data-search="about student principles" href="#about"><span class="palette-result-icon">A.</span><span><strong>About</strong><small>How I approach learning</small></span><kbd>02</kbd></a>
+<a data-search="projects jarvis python ai code" href="#projects"><span class="palette-result-icon">{ }</span><span><strong>Projects</strong><small>Jarvis AI and project notes</small></span><kbd>03</kbd></a>
+<a data-search="achievements academics french olympiad beehes basketball sport" href="#achievements"><span class="palette-result-icon">✳</span><span><strong>Achievements</strong><small>Academic, STEM, and sport</small></span><kbd>04</kbd></a>
+<a data-search="basketball public speaking beehes interests" href="#beyond"><span class="palette-result-icon">↗</span><span><strong>Beyond academics</strong><small>Basketball, speaking, and more</small></span><kbd>05</kbd></a>
+<a data-search="current focus jee pcm learning" href="#now"><span class="palette-result-icon">◷</span><span><strong>Currently</strong><small>What I'm working on now</small></span><kbd>06</kbd></a>
+</nav>
+<div class="palette-bottom"><span><kbd>↑</kbd><kbd>↓</kbd> to navigate</span><span><kbd>ENTER</kbd> to open</span><span><kbd>ESC</kbd> to close</span></div>
+</section>
+</div>
+<footer class="site-footer">
+<div class="wrap footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">A.</span><span>AARUSH<span class="brand-dot">.</span></span></a><span>Built with curiosity · Updated as I learn</span><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
+</footer>
 <script>
-const menu=document.getElementById('menubtn'),nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu'});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu'}));
-document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b===btn)));document.querySelectorAll('[data-panel]').forEach(p=>p.classList.toggle('hidden',p.dataset.panel!==btn.dataset.tab))}));
-document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.setAttribute('aria-selected',String(b===btn)));document.querySelectorAll('.achievement').forEach(el=>el.classList.toggle('hidden',btn.dataset.filter!=='all'&&el.dataset.kind!==btn.dataset.filter))}));
-const topbtn=document.getElementById('topbtn');window.addEventListener('scroll',()=>topbtn.classList.toggle('show',window.scrollY>650),{passive:true});topbtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('copylink').addEventListener('click',async()=>{const button=document.getElementById('copylink');try{await navigator.clipboard.writeText(location.href);button.textContent='Link copied ✓'}catch(e){button.textContent='Copy after publishing';setTimeout(()=>button.textContent='Copy website link',2000)}});
-</script>
-</body></html>
+/* Embedded: site-config.js */
+/* Configure real public links here before publishing. Leave unused fields as empty strings. */
+window.AARUSH_SITE_CONFIG = {
+  linkedin: "",       // Example format: https://www.linkedin.com/in/your-profile/
+  github: "https://github.com/aarushsh201-lang", // Public GitHub profile
+  email: "",          // Example format: hello@example.com
+  jarvisRepo: "",      // Link to the real Jarvis source repository, if public
+  jarvisDemo: ""       // Link to a real working demo, only when one exists
+};
+</script><script>
+/* Embedded: portfolio-links.js */
+
+// Populate only links that are configured by the site owner. Blank values never become fake links.
+(function(){
+  const cfg = window.AARUSH_SITE_CONFIG || {};
+  const externalKeys = ['linkedin','github','jarvisRepo','jarvisDemo'];
+  document.querySelectorAll('[data-config-href]').forEach((el) => {
+    const key = el.getAttribute('data-config-href');
+    const value = cfg[key];
+    if (typeof value === 'string' && value.trim()) {
+      el.href = value.trim();
+      el.hidden = false;
+      if (/^https?:\/\//i.test(value.trim())) { el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+    } else {
+      el.hidden = true;
+    }
+  });
+  document.querySelectorAll('[data-config-email]').forEach((el) => {
+    const value = cfg.email;
+    if (typeof value === 'string' && value.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) {
+      el.href = 'mailto:' + value.trim();
+      el.hidden = false;
+    } else { el.hidden = true; }
+  });
+  document.querySelectorAll('[data-socials-wrapper]').forEach((wrap) => {
+    const hasVisible = wrap.querySelector('a:not([hidden])');
+    wrap.hidden = !hasVisible;
+  });
+  document.querySelectorAll('[data-empty-config-note]').forEach((note) => {
+    const wrapper = document.querySelector('[data-socials-wrapper]');
+    note.hidden = Boolean(wrapper && !wrapper.hidden);
+  });
+})();
+</script><script>
+/* Embedded: script.js */
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    menuToggle.textContent = isOpen ? '×' : '☰';
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+      menuToggle.textContent = '☰';
+    });
+  });
+}
+
+
+// Progressive motion: the site remains readable if JavaScript is disabled.
+document.documentElement.classList.add('js-ready');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Reveal sections and cards as they enter the viewport.
+const revealTargets = document.querySelectorAll('.section-heading, .about-copy, .principles-card, .project-card, .coming-card, .milestone, .sports-card, .now-card, .contact-inner, .hero-copy, .hero-visual');
+revealTargets.forEach((el, i) => {
+  el.classList.add('reveal');
+  if (el.matches('.about-copy')) el.dataset.reveal = 'left';
+  if (el.matches('.principles-card, .sports-card, .hero-visual')) el.dataset.reveal = 'right';
+  if (el.matches('.coming-card, .milestone')) el.style.transitionDelay = `${(i % 3) * 90}ms`;
+});
+if ('IntersectionObserver' in window && !reduceMotion) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12, rootMargin: '0px 0px -35px 0px'});
+  revealTargets.forEach(el => revealObserver.observe(el));
+} else {
+  revealTargets.forEach(el => el.classList.add('is-visible'));
+}
+
+// A slim scroll-progress line and subtle pointer lighting.
+const updateScroll = () => {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+  document.documentElement.style.setProperty('--scroll-progress', String(Math.min(1, Math.max(0, progress))));
+};
+window.addEventListener('scroll', updateScroll, {passive:true});
+updateScroll();
+if (window.matchMedia('(pointer:fine)').matches) {
+  window.addEventListener('pointermove', e => {
+    document.documentElement.style.setProperty('--pointer-x', `${e.clientX}px`);
+    document.documentElement.style.setProperty('--pointer-y', `${e.clientY}px`);
+  }, {passive:true});
+}
+
+// Cards pick up a soft local glow where the pointer moves.
+document.querySelectorAll('.project-card, .coming-card, .milestone, .sports-card').forEach(card => {
+  card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--card-x', `${e.clientX - r.left}px`);
+    card.style.setProperty('--card-y', `${e.clientY - r.top}px`);
+  }, {passive:true});
+});
+
+// Highlight the section currently being viewed in the navigation.
+const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+const sections = sectionLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+if ('IntersectionObserver' in window) {
+  const activeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      sectionLinks.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+    });
+  }, {rootMargin:'-25% 0px -65% 0px'});
+  sections.forEach(section => activeObserver.observe(section));
+}
+
+// Animated particle field in the hero; automatically pauses for reduced-motion users.
+const canvas = document.querySelector('.particle-canvas');
+const heroVisual = document.querySelector('.hero-visual');
+if (canvas && heroVisual && !reduceMotion) {
+  const ctx = canvas.getContext('2d');
+  let w = 0, h = 0, particles = [], raf = 0;
+  const resize = () => {
+    const rect = heroVisual.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = rect.width; h = rect.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    canvas.style.width = `${w}px`; canvas.style.height = `${h}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.min(54, Math.max(24, Math.floor((w * h) / 6500)));
+    particles = Array.from({length:count}, () => ({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.5+.4}));
+  };
+  const draw = () => {
+    ctx.clearRect(0,0,w,h);
+    for (let i=0;i<particles.length;i++) {
+      const p=particles[i]; p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>w)p.vx*=-1; if(p.y<0||p.y>h)p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(169,164,255,.62)';ctx.fill();
+      for(let j=i+1;j<particles.length;j++){
+        const q=particles[j], dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<82){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(137,157,255,${(1-d/82)*.13})`;ctx.lineWidth=.7;ctx.stroke();}
+      }
+    }
+    raf=requestAnimationFrame(draw);
+  };
+  resize(); draw();
+  window.addEventListener('resize', resize, {passive:true});
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) cancelAnimationFrame(raf);
+    else if (!document.hidden) draw();
+  });
+}
+
+
+// Accessible project explorer: keyboard and pointer both work.
+const explorerTabs = [...document.querySelectorAll('.explorer-tab')];
+const explorerPanels = [...document.querySelectorAll('.explorer-panel')];
+function activateExplorerTab(tab, moveFocus = false) {
+  const key = tab.dataset.panel;
+  explorerTabs.forEach(btn => {
+    const selected = btn === tab;
+    btn.classList.toggle('is-active', selected);
+    btn.setAttribute('aria-selected', String(selected));
+    btn.tabIndex = selected ? 0 : -1;
+  });
+  explorerPanels.forEach(panel => {
+    const selected = panel.id === `panel-${key}`;
+    panel.hidden = !selected;
+    panel.classList.toggle('is-active', selected);
+  });
+  if (moveFocus) tab.focus();
+}
+explorerTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => activateExplorerTab(tab));
+  tab.addEventListener('keydown', e => {
+    if (!['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
+    e.preventDefault();
+    let next = index;
+    if (e.key === 'ArrowRight') next = (index + 1) % explorerTabs.length;
+    if (e.key === 'ArrowLeft') next = (index - 1 + explorerTabs.length) % explorerTabs.length;
+    if (e.key === 'Home') next = 0;
+    if (e.key === 'End') next = explorerTabs.length - 1;
+    activateExplorerTab(explorerTabs[next], true);
+  });
+});
+
+// Achievement filters make the milestone grid genuinely explorable.
+const achievementFilters = [...document.querySelectorAll('.achievement-filter')];
+const milestoneCards = [...document.querySelectorAll('.milestone[data-category]')];
+achievementFilters.forEach(button => button.addEventListener('click', () => {
+  const filter = button.dataset.filter;
+  achievementFilters.forEach(item => {
+    const active = item === button;
+    item.classList.toggle('is-active', active);
+    item.setAttribute('aria-pressed', String(active));
+  });
+  milestoneCards.forEach((card, i) => {
+    const show = filter === 'all' || card.dataset.category === filter;
+    card.classList.toggle('is-filtered-out', !show);
+    if (show) card.style.setProperty('--filter-order', i);
+  });
+}));
+
+// Command palette: open with Ctrl/Cmd+K, search sections, and navigate by keyboard.
+const paletteBackdrop = document.getElementById('palette-backdrop');
+const paletteSearch = document.getElementById('palette-search');
+const paletteItems = [...document.querySelectorAll('.palette-results a')];
+const paletteOpeners = [...document.querySelectorAll('.palette-trigger')];
+const paletteClose = document.querySelector('.palette-close');
+let paletteLastFocus = null;
+function openPalette() {
+  if (!paletteBackdrop) return;
+  paletteLastFocus = document.activeElement;
+  paletteBackdrop.hidden = false;
+  document.body.classList.add('palette-open');
+  paletteSearch.value = '';
+  filterPalette('');
+  requestAnimationFrame(() => paletteSearch.focus());
+}
+function closePalette() {
+  if (!paletteBackdrop || paletteBackdrop.hidden) return;
+  paletteBackdrop.hidden = true;
+  document.body.classList.remove('palette-open');
+  if (paletteLastFocus && typeof paletteLastFocus.focus === 'function') paletteLastFocus.focus();
+}
+function filterPalette(query) {
+  const q = query.trim().toLowerCase();
+  let firstVisible = null;
+  paletteItems.forEach(item => {
+    const text = `${item.textContent} ${item.dataset.search || ''}`.toLowerCase();
+    const show = !q || text.includes(q);
+    item.hidden = !show;
+    if (show && !firstVisible) firstVisible = item;
+    item.classList.remove('is-highlighted');
+  });
+  if (firstVisible) firstVisible.classList.add('is-highlighted');
+}
+paletteOpeners.forEach(button => button.addEventListener('click', openPalette));
+paletteClose?.addEventListener('click', closePalette);
+paletteBackdrop?.addEventListener('click', e => { if (e.target === paletteBackdrop) closePalette(); });
+paletteSearch?.addEventListener('input', () => filterPalette(paletteSearch.value));
+paletteItems.forEach(item => item.addEventListener('click', closePalette));
+document.addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openPalette(); return; }
+  if (e.key === 'Escape' && paletteBackdrop && !paletteBackdrop.hidden) { e.preventDefault(); closePalette(); return; }
+  if (!paletteBackdrop || paletteBackdrop.hidden) return;
+  const visible = paletteItems.filter(item => !item.hidden);
+  const current = visible.findIndex(item => item.classList.contains('is-highlighted'));
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    const next = visible.length ? (current + (e.key === 'ArrowDown' ? 1 : -1) + visible.length) % visible.length : -1;
+    paletteItems.forEach(item => item.classList.remove('is-highlighted'));
+    if (visible[next]) visible[next].classList.add('is-highlighted');
+  }
+  if (e.key === 'Enter') {
+    const selected = visible.find(item => item.classList.contains('is-highlighted')) || visible[0];
+    if (selected) { e.preventDefault(); selected.click(); }
+  }
+});
+
+  
+
+
+(function(){
+  const root = document.documentElement;
+  const themeButton = document.getElementById('theme-toggle');
+  const printButton = document.getElementById('print-portfolio');
+  const shareButton = document.getElementById('share-portfolio');
+  const status = document.getElementById('portfolio-action-status');
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('aarush-portfolio-theme'); } catch (e) { /* storage may be unavailable */ }
+  const initialTheme = savedTheme || 'dark';
+  function setTheme(theme, persist = true){
+    const light = theme === 'light';
+    root.dataset.theme = light ? 'light' : 'dark';
+    if (themeButton) {
+      themeButton.setAttribute('aria-pressed', String(light));
+      themeButton.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+      const label = themeButton.querySelector('.theme-toggle-text');
+      const icon = themeButton.querySelector('.theme-toggle-icon');
+      if (label) label.textContent = light ? 'Dark mode' : 'Light mode';
+      if (icon) icon.textContent = light ? '◐' : '☼';
+    }
+    if (persist) { try { localStorage.setItem('aarush-portfolio-theme', light ? 'light' : 'dark'); } catch (e) { /* theme still works for this visit */ } }
+  }
+  setTheme(initialTheme, false);
+  themeButton?.addEventListener('click', () => setTheme(root.dataset.theme === 'light' ? 'dark' : 'light'));
+  printButton?.addEventListener('click', () => {
+    if (status) status.textContent = 'Choose “Save as PDF” in the print destination to export a clean portfolio copy.';
+    window.print();
+  });
+  async function copyText(value){
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value); return true;
+    }
+    const field = document.createElement('textarea');
+    field.value = value; field.setAttribute('readonly','');
+    field.style.position = 'fixed'; field.style.opacity = '0'; field.style.pointerEvents = 'none';
+    document.body.appendChild(field); field.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    field.remove(); return ok;
+  }
+  shareButton?.addEventListener('click', async () => {
+    const publicUrl = /^https?:$/.test(window.location.protocol);
+    if (!publicUrl) {
+      if (status) status.textContent = 'This is a local file right now. Host the website online first, then this button can share its public link.';
+      return;
+    }
+    const shareData = {title: document.title, text: 'Aarush — student portfolio', url: window.location.href};
+    try {
+      if (navigator.share) { await navigator.share(shareData); if (status) status.textContent = 'Share dialog opened.'; return; }
+      const ok = await copyText(window.location.href);
+      if (status) status.textContent = ok ? 'Portfolio link copied to your clipboard.' : 'Could not copy automatically. Copy the page address from your browser.';
+    } catch (err) {
+      if (err && err.name === 'AbortError') { if (status) status.textContent = 'Sharing cancelled.'; return; }
+      try {
+        const ok = await copyText(window.location.href);
+        if (status) status.textContent = ok ? 'Portfolio link copied to your clipboard.' : 'Use your browser address bar to copy the public link.';
+      } catch (e) { if (status) status.textContent = 'Use your browser address bar to copy the public link.'; }
+    }
+  });
+})();
+
+
+
+(function(){
+  // This editor is intentionally enabled only for a local file opened on your computer.
+  // It is not an online login system. Public visitors of a hosted site will not see the editor.
+  if (window.location.protocol !== 'file:') return;
+  document.addEventListener('DOMContentLoaded', function(){
+    const toolbar = document.createElement('div');
+    toolbar.id = 'owner-edit-toolbar';
+    toolbar.setAttribute('contenteditable','false');
+    toolbar.setAttribute('role','region');
+    toolbar.setAttribute('aria-label','Local portfolio editing tools');
+    toolbar.innerHTML = '<span class="oet-label">✦ Portfolio editor</span><span class="oet-note" id="oet-status">Only edits this local copy. Download when finished.</span><button type="button" id="oet-edit" class="primary">Enable editing</button><button type="button" id="oet-save">Download updated site</button>';
+    document.body.appendChild(toolbar);
+    const editButton = toolbar.querySelector('#oet-edit');
+    const saveButton = toolbar.querySelector('#oet-save');
+    const status = toolbar.querySelector('#oet-status');
+    let editing = false;
+
+    function setEditing(on){
+      editing = on;
+      document.body.contentEditable = on ? 'true' : 'false';
+      document.body.classList.toggle('owner-editing', on);
+      toolbar.setAttribute('contenteditable','false');
+      editButton.textContent = on ? 'Finish editing' : 'Enable editing';
+      editButton.classList.toggle('primary', !on);
+      status.textContent = on ? 'Click any text on the page and type. Links are paused while editing.' : 'Edits stay on this copy until you download the updated HTML.';
+    }
+    editButton.addEventListener('click', function(){ setEditing(!editing); });
+    document.addEventListener('click', function(e){
+      if (!editing) return;
+      if (e.target.closest('#owner-edit-toolbar')) return;
+      if (e.target.closest('a')) e.preventDefault();
+    }, true);
+    document.addEventListener('keydown', function(e){
+      if (!editing) return;
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase()==='s'){
+        e.preventDefault(); saveButton.click();
+      }
+    });
+    saveButton.addEventListener('click', function(){
+      setEditing(false);
+      const clone = document.documentElement.cloneNode(true);
+      const cloneToolbar = clone.querySelector('#owner-edit-toolbar');
+      if (cloneToolbar) cloneToolbar.remove();
+      clone.querySelectorAll('[contenteditable], [spellcheck]').forEach(el=>{
+        el.removeAttribute('contenteditable');
+        el.removeAttribute('spellcheck');
+      });
+      clone.querySelector('body')?.classList.remove('owner-editing');
+      const fullHtml = '<!doctype html>\n' + clone.outerHTML;
+      const blob = new Blob([fullHtml], {type:'text/html;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Aarush_Portfolio_Updated.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url), 1500);
+      status.textContent = 'Downloaded. Replace your old local HTML with this updated file.';
+    });
+  });
+})();
+</script></body>
+</html>

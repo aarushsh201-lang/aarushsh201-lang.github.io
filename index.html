@@ -1177,6 +1177,11 @@ document.addEventListener('keydown', e => {
   }
   async function recordPageView(){
     try {
+      const authState = await client.auth.getSession();
+      if(authState.data && authState.data.session &&
+         authState.data.session.user && authState.data.session.user.id === cfg.ownerUserId) {
+        return; // Do not count the signed-in owner as a public visitor.
+      }
       const visitorId = getSessionId();
       const referrerHost = (function(){
         try { return document.referrer ? new URL(document.referrer).hostname.slice(0,180) : ''; }

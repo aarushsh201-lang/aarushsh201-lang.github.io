@@ -31,7 +31,7 @@ jobs:
       - name: Prepare website files
         run: |
           mkdir public
-          cp index.html public/index.html
+          cp index.html analytics-config.js public/
 
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v4

@@ -1151,7 +1151,7 @@ document.addEventListener('keydown', e => {
 
   const url = (cfg.supabaseUrl || '').trim();
   const key = (cfg.supabasePublishableKey || '').trim();
-  if(!url || !key || !/^https:\/\//i.test(url) || key.includes('PASTE_') ||
+  if(!url || !key || !cfg.ownerUserId || !/^https:\/\//i.test(url) || key.includes('PASTE_') ||
      !window.supabase || typeof window.supabase.createClient !== 'function') {
     return; // Tracking stays off until the owner configures a backend.
   }
@@ -1264,6 +1264,12 @@ document.addEventListener('keydown', e => {
       return;
     }
     if(data.session){
+      if(!data.session.user || data.session.user.id !== cfg.ownerUserId){
+        await client.auth.signOut();
+        loginForm.hidden = false; dashboard.hidden = true;
+        setStatus('This account is not configured as the site owner.', 'error');
+        return;
+      }
       loginForm.hidden = true; dashboard.hidden = false;
       const okay = await refreshStats();
       if(!okay){ loginForm.hidden = false; dashboard.hidden = true; }
@@ -1285,12 +1291,17 @@ document.addEventListener('keydown', e => {
     loginButton.disabled = true;
     setStatus('Checking owner login…');
     try {
-      const {error} = await client.auth.signInWithPassword({
+      const {data, error} = await client.auth.signInWithPassword({
         email: emailInput.value.trim(),
         password: passwordInput.value
       });
       if(error){
         setStatus('Sign-in failed. Check your owner credentials and try again.', 'error');
+        return;
+      }
+      if(!data.user || data.user.id !== cfg.ownerUserId){
+        await client.auth.signOut();
+        setStatus('This account is not configured as the site owner.', 'error');
         return;
       }
       loginForm.hidden = true; dashboard.hidden = false;
@@ -1321,6 +1332,16 @@ document.addEventListener('keydown', e => {
     }
   });
   recordPageView();
+  // Restore a private count in the top-right pill only for the configured owner UUID.
+  client.auth.getSession().then(async function(res){
+    const session = res.data && res.data.session;
+    if(session && session.user && session.user.id === cfg.ownerUserId){
+      const {count, error} = await client.from('site_pageviews').select('id', {count:'exact', head:true});
+      if(!error) launch.textContent = '↗ ' + fmt(count) + ' views';
+    } else if(session) {
+      await client.auth.signOut();
+    }
+  }).catch(function(){});
 })();
 </script>
 

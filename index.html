@@ -289,6 +289,39 @@ body.owner-editing a{cursor:text}
 @media(max-width:500px){.radio-media-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.radio-media-subsection{padding:16px}.radio-media-caption{padding:10px}}
 @media(prefers-reduced-motion:reduce){.radio-media-card,.radio-speaking-link{transition:none}}
 
+
+/* Private owner analytics — data remains protected by backend access rules */
+.owner-analytics-trigger{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid rgba(216,255,127,.36);border-radius:999px;background:rgba(216,255,127,.07);color:var(--text,#f5f7ff);font:inherit;font-size:12px;font-weight:750;cursor:pointer;white-space:nowrap;transition:transform .18s,border-color .18s}
+.owner-analytics-trigger:hover{transform:translateY(-1px);border-color:#d8ff7f}
+.owner-analytics-trigger[hidden]{display:none!important}
+.owner-analytics-dialog{width:min(620px,calc(100vw - 28px));max-width:calc(100vw - 28px);max-height:min(85vh,760px);padding:0;border:1px solid #303a55;border-radius:22px;background:#0d1425;color:#f4f6ff;box-shadow:0 32px 110px #000b}
+.owner-analytics-dialog::backdrop{background:#050813d9;backdrop-filter:blur(8px)}
+.owner-analytics-panel{padding:clamp(20px,4vw,30px)}
+.owner-analytics-close{float:right;border:1px solid #303a55;background:#151e33;color:#f4f6ff;border-radius:10px;padding:7px 11px;cursor:pointer}
+.owner-analytics-kicker{margin:0 0 7px;color:#d8ff7f;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.owner-analytics-title{font-size:clamp(26px,4vw,34px);line-height:1.1;letter-spacing:-.055em;margin:0 44px 8px 0}
+.owner-analytics-lead{max-width:480px;color:#aab3c9;font-size:13px;line-height:1.65;margin:0 0 22px}
+.owner-analytics-login{display:grid;gap:12px}
+.owner-analytics-login label{display:grid;gap:6px;color:#cbd4e8;font-size:12px;font-weight:700}
+.owner-analytics-login input{width:100%;padding:12px 13px;border:1px solid #303a55;border-radius:11px;background:#090f1c;color:#f4f6ff;font:inherit;font-size:14px}
+.owner-analytics-login input:focus{outline:2px solid #d8ff7f;outline-offset:2px}
+.owner-analytics-action{border:1px solid #d8ff7f;border-radius:11px;padding:11px 14px;background:#d8ff7f;color:#111827;font:inherit;font-size:13px;font-weight:850;cursor:pointer}
+.owner-analytics-action.secondary{background:#151e33;border-color:#303a55;color:#f4f6ff}
+.owner-analytics-status{min-height:20px;margin:14px 0 0;color:#aab3c9;font-size:12px;line-height:1.5}
+.owner-analytics-status[data-state="error"]{color:#ffadad}
+.owner-analytics-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.owner-analytics-metric{padding:18px;border:1px solid #303a55;border-radius:15px;background:linear-gradient(145deg,#151e33,#0e1423)}
+.owner-analytics-metric span{display:block;color:#aab3c9;font-size:11px}
+.owner-analytics-metric strong{display:block;margin-top:5px;color:#d8ff7f;font-size:clamp(27px,5vw,38px);letter-spacing:-.06em;line-height:1.1}
+.owner-analytics-section-title{font-size:13px;font-weight:800;margin:20px 0 9px}
+.owner-analytics-recent{display:grid;gap:7px;max-height:220px;overflow:auto}
+.owner-analytics-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:10px 12px;background:#111a2c;border:1px solid #26314a;border-radius:10px;font-size:12px}
+.owner-analytics-row strong{overflow-wrap:anywhere;font-weight:750}
+.owner-analytics-row span{color:#aab3c9;text-align:right;flex-shrink:0}
+.owner-analytics-footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:18px}
+.analytics-privacy-note{max-width:1120px;margin:0 auto;padding:0 20px 20px;color:#8490aa;font-size:10px;line-height:1.6}
+@media(max-width:600px){.owner-analytics-trigger{font-size:11px}.owner-analytics-row{flex-direction:column;gap:4px}.owner-analytics-row span{text-align:left}.analytics-privacy-note{padding:0 14px 16px}}
+
 </style></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -305,7 +338,7 @@ body.owner-editing a{cursor:text}
 <a href="#beyond">Beyond academics</a>
 <button aria-haspopup="dialog" class="nav-cta palette-trigger" type="button">Quick jump <kbd>⌘ K</kbd></button>
 <button aria-label="Switch to light theme" aria-pressed="false" class="theme-toggle" id="theme-toggle" type="button"><span aria-hidden="true" class="theme-toggle-icon">☼</span><span class="theme-toggle-text">Light mode</span></button>
-<a href="#contact-profiles">Connect</a></div>
+<a href="#contact-profiles">Connect</a><button aria-label="Open private owner analytics" class="owner-analytics-trigger" id="owner-analytics-trigger" type="button" hidden>Owner stats 🔒</button></div>
 </nav>
 </header>
 <main id="main">
@@ -607,6 +640,41 @@ body.owner-editing a{cursor:text}
 </div>
 <footer class="site-footer">
 <div class="wrap footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">A.</span><span>AARUSH<span class="brand-dot">.</span></span></a><span>Built with curiosity · Updated as I learn</span><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
+
+<p class="analytics-privacy-note">When enabled, this site records anonymous page views and browser-session counts for the owner. It does not collect visitors’ email addresses or try to identify individual visitors.</p>
+<dialog class="owner-analytics-dialog" id="owner-analytics-dialog" aria-labelledby="owner-analytics-title">
+  <div class="owner-analytics-panel">
+    <button aria-label="Close analytics panel" class="owner-analytics-close" id="owner-analytics-close" type="button">Close ✕</button>
+    <p class="owner-analytics-kicker">PRIVATE · OWNER ONLY</p>
+    <h2 class="owner-analytics-title" id="owner-analytics-title">Website analytics</h2>
+    <p class="owner-analytics-lead">View page views, browser sessions, and recent page/referrer summaries. This dashboard does not identify people and never displays visitor email addresses.</p>
+    <form class="owner-analytics-login" id="owner-analytics-login-form">
+      <label for="owner-analytics-email">Owner email
+        <input autocomplete="username" id="owner-analytics-email" name="email" required type="email" inputmode="email" />
+      </label>
+      <label for="owner-analytics-password">Password
+        <input autocomplete="current-password" id="owner-analytics-password" name="password" required type="password" />
+      </label>
+      <button class="owner-analytics-action" id="owner-analytics-login-button" type="submit">Sign in to view stats</button>
+      <p style="margin:0;color:#8f9bb6;font-size:11px;line-height:1.6">These fields are only for the site owner’s Supabase sign-in. They are not a visitor email collection form.</p>
+    </form>
+    <section id="owner-analytics-dashboard" hidden>
+      <div class="owner-analytics-metrics">
+        <div class="owner-analytics-metric"><span>Total page views</span><strong id="owner-analytics-views">—</strong></div>
+        <div class="owner-analytics-metric"><span>Browser sessions*</span><strong id="owner-analytics-sessions">—</strong></div>
+      </div>
+      <p class="owner-analytics-section-title">Recent page visits</p>
+      <div class="owner-analytics-recent" id="owner-analytics-recent"><div class="owner-analytics-row"><strong>Loading visit summaries…</strong></div></div>
+      <p style="margin:12px 0 0;color:#8f9bb6;font-size:10px;line-height:1.6">*Sessions are approximate per-tab browser sessions, not verified people. Counts can include bots and repeat visits.</p>
+      <div class="owner-analytics-footer">
+        <button class="owner-analytics-action secondary" id="owner-analytics-refresh" type="button">Refresh stats</button>
+        <button class="owner-analytics-action secondary" id="owner-analytics-signout" type="button">Sign out</button>
+      </div>
+    </section>
+    <p aria-live="polite" class="owner-analytics-status" id="owner-analytics-status" role="status"></p>
+  </div>
+</dialog>
+
 </footer>
 <script>
 /* Embedded: site-config.js */
@@ -1057,6 +1125,202 @@ document.addEventListener('keydown', e => {
   });
   close.addEventListener('click',function(){ if(typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open'); });
   dialog.addEventListener('click',function(event){ if(event.target===dialog && typeof dialog.close==='function') dialog.close(); });
+})();
+</script>
+
+
+<script src="./analytics-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  const cfg = window.AARUSH_ANALYTICS_CONFIG || {};
+  const launch = document.getElementById('owner-analytics-trigger');
+  const dialog = document.getElementById('owner-analytics-dialog');
+  const closeButton = document.getElementById('owner-analytics-close');
+  const loginForm = document.getElementById('owner-analytics-login-form');
+  const emailInput = document.getElementById('owner-analytics-email');
+  const passwordInput = document.getElementById('owner-analytics-password');
+  const loginButton = document.getElementById('owner-analytics-login-button');
+  const dashboard = document.getElementById('owner-analytics-dashboard');
+  const viewsOut = document.getElementById('owner-analytics-views');
+  const sessionsOut = document.getElementById('owner-analytics-sessions');
+  const recentOut = document.getElementById('owner-analytics-recent');
+  const statusOut = document.getElementById('owner-analytics-status');
+  const refreshButton = document.getElementById('owner-analytics-refresh');
+  const signoutButton = document.getElementById('owner-analytics-signout');
+
+  const url = (cfg.supabaseUrl || '').trim();
+  const key = (cfg.supabasePublishableKey || '').trim();
+  if(!url || !key || !/^https:\/\//i.test(url) || key.includes('PASTE_') ||
+     !window.supabase || typeof window.supabase.createClient !== 'function') {
+    return; // Tracking stays off until the owner configures a backend.
+  }
+
+  launch.hidden = false;
+  const client = window.supabase.createClient(url, key);
+  const sessionStorageKey = 'aarush_portfolio_analytics_session_v1';
+
+  function setStatus(message, state){
+    statusOut.textContent = message || '';
+    statusOut.dataset.state = state || '';
+  }
+  function makeSessionId(){
+    if(window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID();
+    return 's-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
+  }
+  function getSessionId(){
+    try {
+      let id = sessionStorage.getItem(sessionStorageKey);
+      if(!id){ id = makeSessionId(); sessionStorage.setItem(sessionStorageKey, id); }
+      return id;
+    } catch(_e) { return makeSessionId(); }
+  }
+  async function recordPageView(){
+    try {
+      const visitorId = getSessionId();
+      const referrerHost = (function(){
+        try { return document.referrer ? new URL(document.referrer).hostname.slice(0,180) : ''; }
+        catch(_e) { return ''; }
+      })();
+      await client.from('site_sessions').upsert(
+        { visitor_id: visitorId },
+        { onConflict: 'visitor_id', ignoreDuplicates: true }
+      );
+      await client.from('site_pageviews').insert({
+        visitor_id: visitorId,
+        page_path: (window.location.pathname || '/').slice(0,300),
+        referrer_host: referrerHost
+      });
+    } catch(_e) {
+      // Analytics failure must never prevent the portfolio from loading.
+    }
+  }
+  function fmt(value){ return Number(value || 0).toLocaleString(); }
+  function addRecentRows(rows){
+    recentOut.replaceChildren();
+    if(!rows || rows.length === 0){
+      const empty = document.createElement('div');
+      empty.className = 'owner-analytics-row';
+      const label = document.createElement('strong');
+      label.textContent = 'No recorded visits yet';
+      empty.appendChild(label);
+      recentOut.appendChild(empty);
+      return;
+    }
+    rows.forEach(function(row){
+      const item = document.createElement('div');
+      item.className = 'owner-analytics-row';
+      const main = document.createElement('strong');
+      main.textContent = row.page_path || '/';
+      const meta = document.createElement('span');
+      let when = '';
+      try { when = new Date(row.created_at).toLocaleString(); } catch(_e) {}
+      meta.textContent = (row.referrer_host || 'Direct / unknown') + (when ? ' · ' + when : '');
+      item.appendChild(main);
+      item.appendChild(meta);
+      recentOut.appendChild(item);
+    });
+  }
+  async function refreshStats(){
+    setStatus('Loading your private stats…');
+    refreshButton.disabled = true;
+    try {
+      const [views, sessions, recent] = await Promise.all([
+        client.from('site_pageviews').select('id', {count:'exact', head:true}),
+        client.from('site_sessions').select('visitor_id', {count:'exact', head:true}),
+        client.from('site_pageviews').select('page_path,referrer_host,created_at').order('created_at', {ascending:false}).limit(8)
+      ]);
+      const err = views.error || sessions.error || recent.error;
+      if(err){
+        setStatus('Stats are not available for this account yet. Check the owner email in analytics-setup.sql and make sure the SQL setup has been run.', 'error');
+        viewsOut.textContent = '—';
+        sessionsOut.textContent = '—';
+        addRecentRows([]);
+        launch.textContent = 'Owner stats 🔒';
+        return false;
+      }
+      viewsOut.textContent = fmt(views.count);
+      sessionsOut.textContent = fmt(sessions.count);
+      addRecentRows(recent.data || []);
+      launch.textContent = '↗ ' + fmt(views.count) + ' views';
+      setStatus('Private dashboard loaded. These are approximate counts, not a list of identifiable people.');
+      return true;
+    } catch(_e){
+      setStatus('Could not load stats. Check your analytics setup and connection, then try again.', 'error');
+      launch.textContent = 'Owner stats 🔒';
+      return false;
+    } finally {
+      refreshButton.disabled = false;
+    }
+  }
+  async function showPanel(){
+    if(typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open','');
+    setStatus('');
+    const {data, error} = await client.auth.getSession();
+    if(error){
+      loginForm.hidden = false; dashboard.hidden = true;
+      setStatus('Could not check owner sign-in. Try again.', 'error');
+      return;
+    }
+    if(data.session){
+      loginForm.hidden = true; dashboard.hidden = false;
+      const okay = await refreshStats();
+      if(!okay){ loginForm.hidden = false; dashboard.hidden = true; }
+    } else {
+      loginForm.hidden = false; dashboard.hidden = true;
+      setTimeout(()=>emailInput.focus(), 80);
+    }
+  }
+  launch.addEventListener('click', showPanel);
+  closeButton.addEventListener('click', function(){
+    if(typeof dialog.close === 'function') dialog.close();
+    else dialog.removeAttribute('open');
+  });
+  dialog.addEventListener('click', function(event){
+    if(event.target === dialog && typeof dialog.close === 'function') dialog.close();
+  });
+  loginForm.addEventListener('submit', async function(event){
+    event.preventDefault();
+    loginButton.disabled = true;
+    setStatus('Checking owner login…');
+    try {
+      const {error} = await client.auth.signInWithPassword({
+        email: emailInput.value.trim(),
+        password: passwordInput.value
+      });
+      if(error){
+        setStatus('Sign-in failed. Check your owner credentials and try again.', 'error');
+        return;
+      }
+      loginForm.hidden = true; dashboard.hidden = false;
+      const okay = await refreshStats();
+      if(!okay){
+        await client.auth.signOut();
+        loginForm.hidden = false; dashboard.hidden = true;
+      }
+      passwordInput.value = '';
+    } catch(_e){
+      setStatus('Could not sign in. Check your setup and try again.', 'error');
+    } finally {
+      loginButton.disabled = false;
+    }
+  });
+  refreshButton.addEventListener('click', refreshStats);
+  signoutButton.addEventListener('click', async function(){
+    await client.auth.signOut();
+    passwordInput.value = '';
+    loginForm.hidden = false; dashboard.hidden = true;
+    launch.textContent = 'Owner stats 🔒';
+    setStatus('You have signed out.');
+  });
+  client.auth.onAuthStateChange(function(event, session){
+    if(!session && event === 'SIGNED_OUT'){
+      launch.textContent = 'Owner stats 🔒';
+      loginForm.hidden = false; dashboard.hidden = true;
+    }
+  });
+  recordPageView();
 })();
 </script>
 

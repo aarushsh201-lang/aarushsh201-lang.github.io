@@ -2,7 +2,7 @@
    This file is public. The publishable key and owner user UUID are not passwords.
    NEVER place a Supabase secret/service_role key here. */
 window.AARUSH_ANALYTICS_CONFIG = {
-  supabaseUrl: "",              // Example: https://your-project-ref.supabase.co
-  supabasePublishableKey: "",   // Use the public Publishable key (legacy anon key also works with RLS)
-  ownerUserId: ""               // Your Supabase Auth user's UUID; used to restrict the owner dashboard
+  supabaseUrl: "https://wdwjrfmegoxzqitkuzog.supabase.co",
+  supabasePublishableKey: "PASTE_YOUR_PUBLISHABLE_KEY_HERE",
+  ownerUserId: "813d31fb-85db-4c06-a43a-c62ce222439b"
 };

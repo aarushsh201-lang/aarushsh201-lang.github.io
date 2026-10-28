@@ -3,6 +3,6 @@
    NEVER place a Supabase secret/service_role key here. */
 window.AARUSH_ANALYTICS_CONFIG = {
   supabaseUrl: "https://wdwjrfmegoxzqitkuzog.supabase.co",
-  supabasePublishableKey: "PASTE_YOUR_PUBLISHABLE_KEY_HERE",
+  supabasePublishableKey: "sb_publishable_68vh5zaOklh6cxiSwFQ5KA_mvDrU5s6",
   ownerUserId: "813d31fb-85db-4c06-a43a-c62ce222439b"
 };
